@@ -27,6 +27,14 @@ var answer = (littleMermaid + brotherBear + disneyHercules);
 
 alert("You spent $" + answer + " dollars!");
 
+var taxes = answer * 0.065;
+
+alert("However, $" + taxes.toFixed(2) + " dollars will be added due to taxes. :(");
+
+var newTotal = answer + taxes;
+
+alert("Your new total is $" + newTotal.toFixed(2) + " dollars.")
+
 /* Exercise #2 from yesterday
 
 Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
@@ -35,9 +43,9 @@ How much will you receive in payment for this week? You worked 10 hours for Face
 6 hours for Google and 4 hours for Amazon.
  */
 
-var googleResponse = prompt("How many hours did you work at Google for?");
-var amazonResponse = prompt("How many hours did you work at Amazon for?");
-var facebookResponse = prompt("How many hours did you work at Facebook for?");
+var googleResponse = prompt("How many hours did you work at Google this week?");
+var amazonResponse = prompt("How many hours did you work at Amazon this week?");
+var facebookResponse = prompt("How many hours did you work at Facebook this week?");
 
 
 var google = 400 * googleResponse;
