@@ -48,3 +48,34 @@ var answer2 = (google + facebook + amazon);
 
 alert("You earned $" + answer2 + " dollars this week!");
 
+/* Exercise #3 from yesterday
+
+A student can be enrolled in a class only if the class is not full and the class schedule
+does not conflict with her current schedule.
+ */
+
+alert("My results for Exercise 3 are: var studentEnrolled = classNotFull + currentSchedule; " +
+    "+ var studentNotEnrolled = classFull + conflictingSchedule;");
+
+/*Answer for Exercise #3
+var studentEnrolled = classNotFull + currentSchedule;
+var studentNotEnrolled = classFull + conflictingSchedule;
+*/
+
+
+/* Exercise #4 from yesterday
+
+A product offer can be applied only if a person buys more than 2 items, and the offer has
+not expired. Premium members do not need to buy a specific amount of products.
+ */
+
+alert("My results for Exercise 4 are: var normalCustomer; var premiumCustomer; var productOfferPrem = premiumCustomer;" +
+    "var productOfferNorm = normalCustomer + buy2 + notExpired;");
+
+/* Answer for Exercise #4
+var normalCustomer;
+var premiumCustomer;
+
+var productOfferPrem = premiumCustomer;
+var productOfferNorm = normalCustomer + buy2 + notExpired;
+*/
