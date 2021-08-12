@@ -70,7 +70,7 @@ not expired. Premium members do not need to buy a specific amount of products.
  */
 
 alert("My results for Exercise 4 are: var normalCustomer; var premiumCustomer; var productOfferPrem = premiumCustomer;" +
-    "var productOfferNorm = normalCustomer + buy2 + notExpired;");
+    " var productOfferNorm = normalCustomer + buy2 + notExpired;");
 
 /* Answer for Exercise #4
 var normalCustomer;
