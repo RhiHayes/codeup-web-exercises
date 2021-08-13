@@ -13,6 +13,8 @@ function sayHello (name) {
     return("Hello " + name )
 }
 
+console.log(sayHello("codeup"));
+
 //Refactored Code
 
 var storeName = prompt("What is your name?");
@@ -26,8 +28,6 @@ alert('Hello ' + storeName + '!');
  *
  * console.log 'helloMessage' to check your work
  */
-
-sayHello("Rhiannon");
 
 var helloMessage = sayHello("Rhiannon");
 
@@ -91,6 +91,8 @@ return x * y;
 }
 
 console.log(calculateTip(0.20, 20));
+console.log(calculateTip(0.25, 25.50));
+console.log(calculateTip(0.15, 33.42));
 
 /**
  * TODO:
