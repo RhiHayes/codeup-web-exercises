@@ -13,6 +13,12 @@ function sayHello (name) {
     return("Hello " + name )
 }
 
+//Refactored Code
+
+var storeName = prompt("What is your name?");
+alert('Hello ' + storeName + '!');
+
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -121,3 +127,11 @@ function applyDiscount(x, y) {
 }
 console.log(applyDiscount(100, .2))
 
+//Refactored Code
+
+var ogPrice = prompt("What was the orignal price of your product?")
+var discount = prompt("Do you have a coupon code? (convert percent to decimal, please)")
+
+var newPrice = ogPrice - (ogPrice * discount);
+
+alert("Your new, discounted total is $" + newPrice + "dollars!");
