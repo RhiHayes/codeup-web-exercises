@@ -134,4 +134,161 @@ var discount = prompt("Do you have a coupon code? (convert percent to decimal, p
 
 var newPrice = ogPrice - (ogPrice * discount);
 
-alert("Your new, discounted total is $" + newPrice + "dollars!");
+alert("Your new, discounted total is $" + newPrice + " dollars!");
+
+/*Code Challenges
+
+   Make a function called returnTwo() that returns the number 2 when called
+    Test this function with console.log(returnTwo()) */
+
+function returnTwo() {
+    return 2;
+}
+
+returnTwo();
+
+console.log(returnTwo());
+
+
+    /* Make a function called sayHowdy() which console.logs the string “Howdy!”
+    Test this function by directly calling sayHowdy() */
+
+function sayHowdy() {
+    console.log("Howdy!");
+}
+
+sayHowdy();
+
+   /* Remember this function does not need a defined return value
+    Make a function called returnName() that returns the string of your name
+    Test this function with console.log(returnName()) */
+
+function returnName() {
+    return "Rhiannon";
+}
+
+console.log(returnName())
+
+  /*  Make a function called addThree() which takes in a number input and returns the number plus 3.
+    Test this function with console.log(addThree(5)) */
+
+function addThree(x) {
+   return x + 3;
+}
+
+console.log(addThree(5));
+
+   /*  Make a function called sayString() which returns the string input passed in.
+    Test this function with console.log(sayString('codeup')) */
+
+function sayString(x) {
+    return x;
+}
+
+console.log(sayString('codeup'))
+
+/*Challenge Function Drills
+
+
+Write a function called identity(input) that takes in an argument called input and returns that input.*/
+
+function identity(input) {
+    return input;
+}
+
+/*Write a function called getRandomNumber(min, max) that returns a random number between min and max
+values sent to that function call. */
+
+function getRandomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+/* Write a function called first(input) that returns the first character in the provided string. */
+
+function first(inputF) {
+    var inputF = "some string";
+    return inputF.charAt(0);
+}
+
+ /* Write a function called last(input) that returns the last character of a string */
+
+ function last(inputL) {
+    var inputL = "some string";
+    return inputL.charAt(inputL.length-1);
+}
+
+/* Write a function called rest(input) that returns everything but the first character of a string. */
+
+function rest(inputRes) {
+var inputRes = "some string";
+return inputRes.substring(1);
+}
+
+
+/* Write a function called reverse(input) that takes a string and returns it reversed. */
+
+function reverse(inputRev) {
+    var inputRev = "some string";
+    return inputRev.split("").reverse().join("");
+}
+
+/* Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric. */
+
+function isNumeric(inputN) {
+    if (typeof inputN === "number") {
+        return true;
+    }
+    return false;
+}
+
+/*Write a function called count(input) that takes in a string and returns the number of characters. */
+
+function count(inputC) {
+    return inputC.length;
+}
+
+ /*   Write a function called add(a, b) that returns the sum of a and b */
+
+ function add(a, b) {
+     return a + b;
+ }
+
+/* Write a function called subtract(a, b) that return the difference between the two inputs. */
+
+ function subtract(c, d) {
+     return c + d;
+ }
+
+ /* Write multiply(a, b) function that returns the product */
+
+function multiply(e, f) {
+    return e * f;
+}
+
+/* Write a divide(numerator, denominator) function that returns a divided by b */
+
+function divide(g, h) {
+return g / h;
+}
+
+/* Write a remainder(number, divisor) function that returns the remainder left over when dividing
+number by the divisor. */
+
+function remainder(num, div) {
+    return num % div;
+}
+
+/* Write the function square(a) that takes in a number and returns the number multiplied by itself. */
+
+function square(s) {
+    return s * s;
+}
+
+/* Write a function called sumOfSquares(a, b) that uses only your add() function and your square function
+    and not + or * operators */
+
+
+
+/* Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math
+function you want to apply. a and b are the two numbers to run that function on.
+ */
