@@ -1,13 +1,19 @@
 console.log("I'm connected!");
 
-/* I'm going to copy the code from the Functions lesson and
+/* NOTE FROM ME: I'm going to copy the code from the Functions lesson and
 analyze/refactor the code to deepen my understanding of functions.
  */
 
-someFunction(); // call the function someFunction()
+//someFunction(); // call the function someFunction()
+
 parseInt("42"); // call the parseInt function with an argument of "42"
 
 
+//NOTE FROM ME: Turned doSomething into a function
+
+function doSomething(a) {
+    return a + 10;
+}
 
 var result = doSomething(); // Result now holds the value of what doSomething() returns
 console.log(doSomething()); // The value doSomething() returns is passed to console.log()
@@ -25,9 +31,9 @@ parseInt;
 
 
 
-function myFunction(input) {
-    var output = /* do something to calculate output */
-    return output;
+function myFunction(x) {
+    var y = x + 2 /* do something to calculate output */
+    return y;
 }
 
 
