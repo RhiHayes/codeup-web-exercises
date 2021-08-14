@@ -131,9 +131,8 @@ console.log(applyDiscount(100, .2))
 
 //Refactored Code
 
-var ogPrice = prompt("What was the orignal price of your product?")
+var ogPrice = prompt("What was the original price of your product?")
 var discount = prompt("Do you have a coupon code? (convert percent to decimal, please)")
-
 var newPrice = ogPrice - (ogPrice * discount);
 
 alert("Your new, discounted total is $" + newPrice + " dollars!");
@@ -289,8 +288,21 @@ function square(s) {
 /* Write a function called sumOfSquares(a, b) that uses only your add() function and your square function
     and not + or * operators */
 
+/* NOTE FOR ME: I don't think I wrote this function right...I tried to change square to change two
+* parameters since that was a big issue, but kept running into problems. :( */
 
+
+function sumOfSquares(one, two) {
+    return square(one) + square(two);
+}
 
 /* Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math
 function you want to apply. a and b are the two numbers to run that function on.
  */
+
+/* NOTE FOR ME: I tried to pass add as a parameter but it didn't register...I tried looking up how to
+* pass a function as a parameter and I didn't find anything helpful. :( */
+
+function doMath(three, four) {
+  return add(three, four);
+}
