@@ -46,15 +46,20 @@ var four = increment(3);
 var six = increment(increment(increment(3)));
 
 
-
-var six = increment(increment(increment(3)));
-var six = increment(increment(4));
-var six = increment(5);
-var six = 6;
+//NOTE FROM ME: ALL of these variables increment until the variable is 6.
 
 
+var six1 = increment(increment(increment(3)));
+var six2 = increment(increment(4));
+var six3 = increment(5);
+var six4 = 6;
 
-function increment(someNumber) {
+
+
+/* NOTE FOR ME: A function only ever executes ONE return statement. That's why
+it isn't running. */
+
+function increment2(someNumber) {
     return someNumber + 1;
     console.log('you will never see this.');
     return someNumber + 2; // This will never run
@@ -65,6 +70,7 @@ function increment(someNumber) {
 function sum(a, b) {
     var result = a + b; // technically the `result` variable is not necessary
     return result;      // instead we could just return a + b directly
+    // MY ADD ON: but if you wanted to store the information, it could be useful to store in a var.
 }
 
 var x = 3;
@@ -73,6 +79,7 @@ var seven = sum(x, 4);
 
 
 // a function with no return value
+//NOTE FROM ME: Because it has no return value!
 function shout(message) {
     alert(message.toUpperCase() + "!!!");
 }
