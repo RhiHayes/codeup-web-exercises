@@ -86,3 +86,24 @@ function shout(message) {
 
 var returnValue = shout('hello there');
 console.log(returnValue); // undefined
+
+
+/* MORE FUNCTION WEEKEND PRACTICE */
+
+var cupcake = prompt("How many cupcakes do you have?")
+var eat = prompt("How many cupcakes did you eat?")
+
+
+function cupcakeCalc() {
+    var cupcakesLeft = cupcake - eat;
+    return cupcakesLeft;
+}
+
+alert("You have " + cupcakesLeft + " cupcakes left!");
+
+/* NOTE FROM ME:
+So I was experimenting with this code...it doesn't work so I''m analyzing it to figure out
+why. So it's looking like functions can't do anything with variables outside of it's parameters,
+because it can't calculate "cupcake" and "eat". But when I try putting the variables i a function...
+ */
+
