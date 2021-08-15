@@ -129,3 +129,20 @@ function cupcakeCalc3(c, e) {
     var cupcakesLeft3 = c - e;
     return cupcakesLeft3;
 }
+
+/* NOTE FROM ME:
+The code above works because it's what we've been practicing for the past day. I made this code in
+an attempt to figure out where I was going wrong with "cupcakeCalc2", but nothing is wrong with either
+"cupcakeCalc2" or "cupcakeCalc3"!
+ */
+
+function cupcakeCalc4() {
+    var cupcake4 = prompt("How many cupcakes do you have?")
+    var eat4 = prompt("How many cupcakes did you eat?")
+    var cupcakesLeft4 = cupcake4 - eat4;
+    alert("You have " + cupcakesLeft4 + " cupcakes left!");
+}
+
+/* NOTE FROM ME:
+I added an alert so the user is notified how many cupcakes they have left!
+ */
