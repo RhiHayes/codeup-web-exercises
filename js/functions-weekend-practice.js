@@ -88,7 +88,10 @@ var returnValue = shout('hello there');
 console.log(returnValue); // undefined
 
 
+
 /* MORE FUNCTION WEEKEND PRACTICE */
+
+
 
 var cupcake = prompt("How many cupcakes do you have?")
 var eat = prompt("How many cupcakes did you eat?")
@@ -103,7 +106,26 @@ alert("You have " + cupcakesLeft + " cupcakes left!");
 
 /* NOTE FROM ME:
 So I was experimenting with this code...it doesn't work so I''m analyzing it to figure out
-why. So it's looking like functions can't do anything with variables outside of it's parameters,
-because it can't calculate "cupcake" and "eat". But when I try putting the variables i a function...
+why. So it's looking like functions can't do anything with variables outside of it's brackets,
+because it can't calculate "cupcake" and "eat". But when I try putting the variables in a function...
  */
 
+function cupcakeCalc2() {
+    var cupcake2 = prompt("How many cupcakes do you have?")
+    var eat2 = prompt("How many cupcakes did you eat?")
+    var cupcakesLeft2 = cupcake2 - eat2;
+    return cupcakesLeft2;
+}
+
+/* NOTE FROM ME:
+It STILL doesn't work! If I try to execute this function it just returns the code! Is it because
+my variables are prompts? Do I need to change that? Who knows! I'll keep trying!
+
+UPDATE:
+Okay, the "cupcakeCalc2" code actually DOES work, but I forgot the () to call it. Whoops.
+ */
+
+function cupcakeCalc3(c, e) {
+    var cupcakesLeft3 = c - e;
+    return cupcakesLeft3;
+}
