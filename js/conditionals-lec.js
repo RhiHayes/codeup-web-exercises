@@ -117,3 +117,43 @@ function trafficColor() {
 
 }
 
+
+//If/else before a ternary
+
+if(true) {
+//execute if condition is true
+    console.log("It's sunny!");
+} else {
+    //execute if condition is false
+    console.log("It's not sunny!");
+}
+
+//Rewritten the above code as a ternary
+
+(true) ? console.log("This is a sunny day!") : console.log("This is not a sunny day!");
+
+
+//Switch Statement
+
+function trafficColor2() {
+
+    var userTrafficLight2 = prompt("What color is the light right now?");
+
+    userTrafficLight2 = userTrafficLight2.toLowerCase();
+
+    switch (userTrafficLight2) {
+        case "red":
+            alert("Stop! The light is red!");
+            break;
+        case "yellow":
+            alert("Slow down! The light is yellow!");
+            break;
+        case "green":
+            alert("Go go go, the light is green!");
+            break;
+        default:
+            alert("This is the default!")
+            break;
+    }
+
+}
