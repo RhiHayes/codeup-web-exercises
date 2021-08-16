@@ -52,3 +52,68 @@ if (isSunny2 && haveSunscreen2) {
 } else {
     alert("Oh, well have a good day!  You'll be alright!");
 }
+
+/* If, else-if, else - syntax and example with literal booleans */
+/* If true for first condition, condition 1 is true.
+If false for first condition but true for second condition, condition
+2 is true.
+If false for condition 1 and condition 2, else executes.
+ */
+
+
+if (true) {
+    //execute if condition 1 is true
+    alert("Condition 1 was true!");
+} else if (true) {
+    //execute if condition 2 is true
+    alert("Condition 2 was true!");
+} else {
+    //execute if all above conditions do not evaluate to true
+    alert("None of the other conditions were true.");
+}
+
+
+
+var trafficLight = "red";
+
+if(trafficLight === "red") {
+    alert("Stop! The light is red!");
+} else if(trafficLight === "yellow") {
+    alert("Slow down! The light is yellow right now!");
+} else if (trafficLight === "green") {
+    alert("Keep going! The light is green! Go go go!")
+} else {
+    alert("That isn't a color of a traffic light!")
+}
+
+
+
+function trafficColor() {
+
+    var userTrafficLight = prompt("What color is the light right now?");
+
+    userTrafficLight = userTrafficLight.toLowerCase();
+
+    if(userTrafficLight === "red") {
+
+        var isBlinking = confirm("Uh oh - is the red light blinking?");
+
+        if(isBlinking) {
+            //Nested conditional to trigger IF condition 1 is true...
+            //AND this condition is true
+            alert("If the red light is blinking, treat it like a stop sign and be cautious!");
+        } else {
+            alert("Okay, if it was blinking that would be a different story.");
+        }
+
+        alert("Stop! The light is red!");
+    } else if(userTrafficLight === "yellow") {
+        alert("Slow down! The light is yellow right now!");
+    } else if (userTrafficLight === "green") {
+        alert("Keep going! The light is green! Go go go!")
+    } else {
+        alert("That isn't a color of a traffic light!")
+    }
+
+}
+
