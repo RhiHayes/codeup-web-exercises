@@ -62,26 +62,33 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 function analyzeColor2() {
 
-    var yourColor2 = prompt("Give me a color!");
-
-    yourColor2 = yourColor2.toLowerCase();
-
-    switch (yourColor2) {
+    switch (randomColor) {
         case "red":
             alert("This is red!");
             break;
+        case "orange":
+            alert("This is orange");
+            break;
+        case "yellow":
+            alert("This is yellow!");
+            break;
+        case "green":
+            alert("This is green!")
+            break;
         case "blue":
-            alert("This is blue!");
+            alert("This is blue!")
             break;
-        case "cyan":
-            alert("This is cyan!");
+        case "indigo":
+            alert("This is indigo!")
             break;
+        case "violet":
+            alert("This is violet!")
         default:
             alert("I don't know this color!")
             break;
     }
 
-    console.log(randomColor);
+    console.log("My random color was " + randomColor + ".");
 
 }
 
@@ -126,8 +133,6 @@ function analyzeColor3() {
             alert("I don't know this color!")
             break;
     }
-
-    console.log(randomColor);
 
 }
 
@@ -209,7 +214,7 @@ function calculateTotal(luckyNumX, totalAmountX) {
 var luckyNumber = Math.floor(Math.random() * 6);
 
 
-function calcTotal() {
+function calculateTotal2() {
 
     var luckyNumberPop = confirm("Your lucky number is: " + luckyNumber + "!");
     var luckyNumR = prompt("Hey, you got lucky a number between 0 and 5! Awesome! Which do you get?")
