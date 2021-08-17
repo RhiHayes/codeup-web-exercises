@@ -169,32 +169,31 @@ for (var i = 1; i < 25; i++){
 // TODO: Quasar, how would we refactor the above back into a WHILE loop as we saw earlier?
 
 
-
 // Below is a funky example that works, but will rely on moving between different data types.
-// for (var i = "A"; i.length < 8; i = i + "A") {
-//     console.log("This is a bit of a tricky way to run a for loop, but hey, it works...");
-// }
+ for (var i = "A"; i.length < 8; i = i + "A") {
+     console.log("This is a bit of a tricky way to run a for loop, but hey, it works...this is what i looks like: " + i.length);
+ }
 
 // We can get a loop to stop using break;
 
-// var x = 0;
-//
-// while (true) {
-//     alert("This is the song that never ends. It just goes on and on my friends. Somebody started singing not knowing what it was, and now we'll all just keep on singing this because");
-//     x++;
-//     if (x === 5) {
-//         alert("LambChop, cut it out!!")
-//         break;
-//     }
-// }
+var x = 0;
+
+while (true) {
+     alert("This is the song that never ends. It just goes on and on my friends. Somebody started singing not knowing what it was, and now we'll all just keep on singing this because");
+     x++;
+     if (x === 5) {
+         alert("LambChop, cut it out!!")
+         break;
+     }
+ }
 
 
-// for (var j = 5; j < 100000; j += 5) {
-//     if (j === 25) {
-//         break;
-//     }
-//     console.log(j);
-// }
+for (var j = 5; j < 100000; j += 5) {
+     if (j === 25) {
+         break;
+     }
+     console.log(j);
+ }
 
 // Notice that by having the break, we're able to get out of the loop that would otherwise run forever.
 
@@ -211,8 +210,8 @@ function allOddNumbersToX (x) {
     return x;
 }
 
-// allOddNumbersToX(17);
-// allOddNumbersToX(18);
+allOddNumbersToX(17);
+//allOddNumbersToX(18);
 
 
 // The above function will only log the odd numbers until the argument passed.
