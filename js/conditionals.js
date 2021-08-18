@@ -339,7 +339,7 @@ else {
 function ancestors () {
 
     var genderDecision = prompt("Choose a gender for your ancestor! M or F?");
-    var treeDecision = prompt("Choose a generation!");
+    var treeDecision = prompt("Choose a generation! (From -3 to 3)");
 
     var genderDecision = genderDecision.toLowerCase();
     var treeDecision = parseInt(treeDecision, 10);
