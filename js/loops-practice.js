@@ -1,11 +1,16 @@
-console.log("Hi");
+console.log("Loops Practice!");
+
+/*NOTE FROM ME:
+
+I don't think I can do a lot of these since we haven't learned arrays yet.
+I'll do what i can with the knowledge I possess.
+
+ */
+
 
 /*Exercise 1)
 Get the sum of two arrays…actually the sum of all their elements.
     P.S. Each array includes only integer numbers. Output is a number too.*/
-
-
-
 
     let arr_1 = [3, 5, 22, 5,  7,  2,  45, 75, 89, 21, 2]; // --> 276
 let arr_2 = [9, 2, 42, 55, 71, 22, 4,  5,  90, 25, 26]; // --> 351
@@ -14,21 +19,45 @@ let arr_2 = [9, 2, 42, 55, 71, 22, 4,  5,  90, 25, 26]; // --> 351
 
 
 
-/*Exercise 2)
+/*Exercise 2)--- DONE!
 Using a for loop print all even numbers up to and including n. Don’t include 0.*/
 
 let n1 = 22;
 // Example output:
 // 2 4 6 8 10 12 14 16 18 20 22 OR each item on a new line
 
+for (var i = 1; i <= 22; i++) {
+    if ( i % 2 !== 0) {
+        continue;
+    }
+
+    else {
+        console.log("Here is an even number: " + i);
+    }
+}
 
 
-/*Exercise 3)
+
+
+
+/*Exercise 3)-- DONE!
+
+
+NOTE FROM ME:
+
+When using reverse, don't use () unless you want it to be a function.
+
+
 Using a for loop output the elements in reverse order*/
 
-let arr = [43, "what", 9, true, "cannot", false, "be", 3, true];
+let arr = [43, "what", 9, true, "cannot", false, "be", 3.5, true];
 // Example output:
 // true 3.5  be  false cannot  true 9 what 43 OR each item on a new line
+
+for (i = arr; i.reverse; i++) {
+    console.log(i);
+}
+
 
 
 

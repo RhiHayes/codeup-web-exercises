@@ -59,7 +59,7 @@ function countDown5 () {
 //Exercise 4
 /* NOTES FOR ME:
 
-Inside the parenthesis, i is turned into a string, then repeated "i"
+Inside the parenthesis of console.log, i is turned into a string, then repeated "i"
 amount of times. The rest of this makes sense to me, I think. Might need a
 refresher.
  */
