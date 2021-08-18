@@ -60,19 +60,19 @@ while (j>= 0) {
 // A do/while loop is quite similar to a while loop. The biggest difference is that a do/while loop will run at least once
 // [do this thing for sure this first time . . then check condition to continue VS. check condition . . will I do this thing at all?]
 
-// do {
-//  Code to be run.
-// } while (condition)
+do {
+  //Code to be run.
+ } while (condition)
 
 // Consider:
 
-// while (false) {
-//     console.log("will you ever see me?");
-// }
-//
-// do {
-//     console.log("But what about me?");
-// } while (false);
+ while (false) {
+     console.log("will you ever see me?");
+ }
+
+ do {
+     console.log("But what about me?");
+ } while (false);
 
 // Notice that even with a condition that has a boolean value of false, the do while loop will run one time be for stopping.
 

@@ -17,5 +17,20 @@ amount of cones being bought by her clients. Use a do-while loop to log to the c
 the amount of cones sold to each person.
  */
 
+// This is how you get a random number between 50 and 100
+var allCones = Math.floor(Math.random() * 50) + 50;
+// This expression will generate a random number between 1 and 5
+var boughtCones = Math.floor(Math.random() * 5) + 1;
+
+console.log("There are " + allCones + " cones total.");
+
+do {
+    var remainingCones = allCones - boughtCones;
+    console.log("There are " + remainingCones + " left.");
+} while (allCones <= 0);
+
+
+
+
 
 

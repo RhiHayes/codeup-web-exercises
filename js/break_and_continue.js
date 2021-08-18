@@ -1,5 +1,6 @@
-console.log("Complete!")
+console.log("Break and Continue: Complete!")
 
+//Completed ALL Exercises!
 
 do {
     var userNum = prompt("Give me a number between 1-50!");
