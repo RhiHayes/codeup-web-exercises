@@ -1,8 +1,8 @@
 
 console.log("Currently incomplete: for-loops.js");
 
-// Completed Exercise 1-2
-//Incomplete: Exercise 3-5
+// Completed Exercise 1-2-5
+//Incomplete: Exercise 3-4
 
 
 function showMultiplicationTable () {
@@ -11,7 +11,9 @@ function showMultiplicationTable () {
 
     console.log("The number you wanted to multiply was: " + number);
 
-    /* First for: i equals one
+    /* NOTES FROM ME: Exercise 1-2
+
+    First for: i equals one
     Second for: i will continue to go until it equals 10
     Third for: increments i
 
@@ -32,6 +34,26 @@ function showMultiplicationTable () {
 
 }
 
+/* NOTES FROM ME: Exercise 5
+
+    Variable j equals 100
+
+    While Loop:
+    while j is less than 0, j equals j minus 5...then console log the result. Then repeat!
+
+     */
+
+function countDown5 () {
+
+    var j = 100;
+
+    while (j > 0) {
+        j = j - 5;
+        console.log(j);
+    }
+
+
+}
 
 
 
