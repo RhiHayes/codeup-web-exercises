@@ -44,10 +44,10 @@ function iceCream() {
 
     do {
         var boughtCones = Math.floor(Math.random() * 5) + 1;
-        console.log( boughtCones + " have been sold");
+        console.log( boughtCones + " have been sold!");
         if(allCones >= boughtCones) {
             allCones = allCones - boughtCones;
-            console.log("There are " + allCones + " more cones to sell");
+            console.log("There are " + allCones + " more cones to sell.");
         }
     } while(allCones > 0);
     console.log("I sold all the cones!");
