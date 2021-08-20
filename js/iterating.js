@@ -1,4 +1,4 @@
-console.log("Hi");
+console.log("Connected");
 
 (function(){
     "use strict";
@@ -9,11 +9,18 @@ console.log("Hi");
      * 'names'.
      */
 
+var names = ["Rhiannon", "Maddy", "Jade", "Sally"]
+
+
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+
+    console.log(names);
+
 
     /**
      * TODO:
@@ -21,16 +28,35 @@ console.log("Hi");
      * accessing each element's index.
      */
 
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
+
+    console.log("---------------");
+
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
 
+    for (var i = 0; i < names.length; i += 1) {
+        console.log(names[i]);
+    }
+
+    console.log("---------------");
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(element){
+            console.log("Element " + element);
+         });
+
+    console.log("---------------");
 
     /**
      * TODO:
@@ -46,4 +72,33 @@ console.log("Hi");
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    var numbers = [1, 2, 3, 4, 5];
+
+
+
+    function firstItem(x) {
+
+    return x[0];
+
+    }
+
+    console.log(firstItem(numbers));
+
+    function secondItem(x) {
+
+        return x[1];
+
+    }
+
+    console.log(secondItem(numbers));
+
+    function lastItem(x) {
+
+       return x[x.length-1];
+
+    }
+
+    console.log(lastItem(numbers));
+
 })();
+
