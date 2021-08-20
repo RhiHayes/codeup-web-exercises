@@ -42,43 +42,64 @@
     // ============================= Declaring/Initializing an Array with Array Literal Syntax
 
     // empty arrays may be declared
-    // var pies = [];
-    // console.log(pies);
+     //var pies = [];
+     //console.log(pies);
     //
-    // var pies = ["apple", "cherry", "key lime", "huckleberry"];
-    // console.log(pies);
+     /*
+
+     var pies = ["apple", "cherry", "key lime", "huckleberry"];
+     console.log(pies);
+
+     var applePie = pies[0];
+    var keyLimePie = pies[2];
+
+     console.log(applePie);
+     console.log(keyLimePie);
+     console.log(pies[2]);
+
+     //Replacing a pie
+
+    pies[3] = "banana";
+    console.log(pies);
+
+    */
+
 
     // declaring and initializing a large array
 
-    // var students = [
-    //     "Student 1",
-    //     "Student 2",
-    //     "Student 3",
-    //     "Student 4",
-    //     "Student 5",
-    //     "Student 6",
-    //     "Student 7",
-    //     "Student 8"
-    // ];
+     var students = [
+         "Student 1",
+         "Student 2",
+         "Student 3",
+         "Student 4",
+         "Student 5",
+         "Student 6",
+         "Student 7",
+         "Student 8"
+     ];
 
 
     // separate declaration and initialization
 
-    // var pies = [];
-    // pies[0] = "apple";
-    // pies[1] = "cherry";
+     /*
+
+     var pies = [];
+     pies[0] = "apple";
+     pies[1] = "cherry";
 
     // declaring and initializing a high index number
-    // pies[10] = "huckleberry";
-    // console.log(pies);
+     pies[10] = "huckleberry";
+     console.log(pies);
+
+     */
 
 
 
     // ============================= Counting Array Items
 
-    // var pies = ["apple", "cherry", "key lime", "huckleberry"];
-    // var numberOfPies = pies.length;
-    // console.log(numberOfPies);
+     var pies = ["apple", "cherry", "key lime", "huckleberry"];
+     //var numberOfPies = pies.length;
+     //console.log(numberOfPies);
 
 
     // ============================= Accessing Array Elements
@@ -86,6 +107,17 @@
     // console.log(pies[100]);
     // console.log(pies[3]);
 
+    /*NOTE FOR ME:
+
+    To get to the last item of an array, do length-1
+
+    Either pies[pies.length-1]
+
+    OR
+
+    pies.length-1
+
+    */
 
     // ============================= For Loop
 
@@ -105,15 +137,21 @@
 
     // example
 
-    // for (var i = 0; i < pies.length; i += 1) {
-    //     console.log("I like " + pies[i]);
-    // }
+    /* NOTE FROM ME:
+
+    The "0" in the for loop represents which index to start at.
+
+    */
+
+     //for (var i = 0; i < pies.length; i += 1) {
+     //   console.log("I like " + pies[i]);
+     // }
 
     // backwards
 
-    // for (var i = pies.length - 1; i >= 0; i -= 1) {
-    //     console.log("I like " + pies[i]);
-    // }
+     //for (var i = pies.length - 1; i >= 0; i -= 1) {
+     //    console.log("I like " + pies[i]);
+     // }
     //
     // console.log(pies);
 
@@ -140,14 +178,14 @@
 
 
     // standard syntax
-    // var pies = ["apple", "cherry", "key lime", "huckleberry"];
+     var pies = ["apple", "cherry", "key lime", "huckleberry"];
 
     // defining all three parameters
     // pies.forEach(function(element, index, array){
     //
-    //     console.log("Element " + element + " is at index " + index);
-    //     console.log(pies);
-    //     console.log(array);
+    //    console.log("Element " + element + " is at index " + index);
+    //    console.log(pies);
+    //    console.log(array);
     //
     // });
 
