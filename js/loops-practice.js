@@ -125,19 +125,27 @@ attempt of if they got it right.*/
 // That was correct!
 
 
+/*
+
+THIS CODE ISN'T WORKING RIGHT NOW! COME BACK TO IT LATER!
+
+
+
 var guess = prompt("Guess my pin!");
 var guessC = parseInt(guess, 10);
 
-do {
+while (guessC !== pin) {
     alert("You got it wrong, sorry!");
     prompt("Guess my pin!");
-} while (guessC !== pin);
+}
 
 
 if (guessC === pin) {
     alert("Yay, you got it right!");
 }
 
+
+ */
 
 /*Exercise 9)
 Write a program that will check if two strings are palindromes. A palindrome is a word that spells the same forward and backward.
