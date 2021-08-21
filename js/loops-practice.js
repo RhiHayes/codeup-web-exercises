@@ -104,23 +104,14 @@ let n2 = 4; //  4 * 3 * 2 * 1 = 24
 
 
 
-/*Exercise 8)
+/*Exercise 8)-- Working on it
+
 Write a program that will allow someone to guess a four digit pin exactly 4
 times. If the user guesses the number correctly. It prints “That was
 correct!” Otherwise it will print “Sorry that was wrong.” Program stops after the 4th
 attempt of if they got it right.*/
 
     let pin = 1234;
-
-    do {
-        var guess = prompt("Guess my pin!");
-        var guessC = parseInt(guess, 10);
-    } while (guessC !== pin)
-
-if (guessC === pin) {
-    alert("Yay, you got it right!");
-}
-
 
 // Example output:
 // Please make your guess:
@@ -133,6 +124,19 @@ if (guessC === pin) {
 // 0704
 // That was correct!
 
+
+var guess = prompt("Guess my pin!");
+var guessC = parseInt(guess, 10);
+
+do {
+    alert("You got it wrong, sorry!");
+    prompt("Guess my pin!");
+} while (guessC !== pin);
+
+
+if (guessC === pin) {
+    alert("Yay, you got it right!");
+}
 
 
 /*Exercise 9)
