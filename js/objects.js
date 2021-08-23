@@ -216,4 +216,35 @@ Then at the bottom, everything is logged!
      *   `showBookInfo` function.
      */
 
+    /* NOTES FROM ME
+
+  Finished the first part of the first TODO!
+
+   */
+
+
+
+
+function createBook() {
+
+    var title = prompt("Give me the title of your book!");
+    var authorN = prompt("Who was this book written by?");
+
+    var newBook = [
+        {
+        name: title,
+        author: authorN
+        }
+    ]
+
+        newBook.forEach(function(book, index) {
+            console.log("The title of my new book is: " + book.name);
+            console.log("The writer of my new book is: " + book.author);
+        });
+
+
+    }
+
+    createBook();
+
 })();
