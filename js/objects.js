@@ -1,8 +1,6 @@
 console.log("I'm connected");
 
-
-
-(function() {
+(function(indexOf) {
     "use strict";
 
     /**
@@ -16,6 +14,16 @@ console.log("I'm connected");
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    var person = {
+        firstName: "Rhiannon",
+        lastName: "Hayes",
+        sayHello() {
+            alert("Hello " + this.firstName + " " + this.lastName)
+        }
+    }
+
+    console.log(person);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -25,6 +33,8 @@ console.log("I'm connected");
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -40,11 +50,40 @@ console.log("I'm connected");
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+         {name: 'Cameron', amount: 180},
+         {name: 'Ryan', amount: 250},
+         {name: 'George', amount: 320}
+     ];
+
+/* NOTES FROM ME
+
+Starting with the forEach Loop!
+
+The forEach loop loops through every shopper and their amount (see shoppers object above).
+Then it states that if the shopper's amount is greater than 200, they get a 12%. The math to do this is
+executed and the discount is logged. If not, the discount is equal to zero and the discount of 0 is logged.
+
+Then at the bottom, everything is logged!
+
+ */
+
+
+    shoppers.forEach(function(shopper) {
+        if (shopper.amount > 200) {
+            var discount = shopper.amount * .12;
+            console.log(shopper.amount - discount);
+        } else {
+            discount == 0;
+            console.log(shopper.amount)
+        }
+
+        console.log("Here is the name: " + shopper.name + " and the amount: " + shopper.amount + "." + " Your discount is " + (shopper.amount - discount))
+
+
+
+    });
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -58,6 +97,65 @@ console.log("I'm connected");
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+/*NOTES FROM ME:
+
+  This was probably the easiest thing to do for me.
+
+  All of these books are inside of the books array object. Inside of each book is a nested author name, which includes the first and last name of the authors of the books.
+
+   */
+
+
+
+    var books = [
+        {
+            name: "Attack on Titan",
+            authorName: {
+                firstName: "Hajime",
+                lastName: "Isayama"
+            },
+        },
+
+        {
+            name: "My Hero Academia",
+            authorName: {
+                firstName: "Kohei",
+                lastName: "Horikoshi"
+            },
+        },
+
+        {
+            name: "Death Note",
+            authorName: {
+                firstName: "Tsugumi",
+                lastName: "Ohba"
+            },
+        },
+
+        {
+            name: "Black Butler",
+            authorName: {
+                firstName: "Yana",
+                lastName: "Toboso"
+            },
+        },
+
+
+        {
+            name: "Tokyo Ghoul",
+            authorName: {
+                firstName: "Sui",
+                lastName: "Ishida"
+            }
+
+        }]
+
+    console.log(books[0].name);
+    console.log(books[0].authorName);
+    console.log(books[0].authorName.firstName);
+    console.log(books[0].authorName.lastName);
+
 
     /**
      * TODO:
@@ -83,6 +181,29 @@ console.log("I'm connected");
      *      ---
      *      ...
      */
+
+
+ /* NOTES FROM ME
+
+  The for each loop loops through all of the books!
+
+  INCLUDE INDEX IN THE FOREACH LOOP IF YOU WANT THE INDEX TO BE LOGGED!
+
+  - console.log(index) states the index of the books
+  - the second console.log logs the title
+  - the third console.log logs the author name
+  the last console.log is a barrier
+
+   */
+
+
+    books.forEach(function(book, index) {
+    console.log(index);
+    console.log("Title: " + book.name);
+    console.log("Author: " + book.authorName.firstName + " " + book.authorName.lastName);
+    console.log("---------");
+    });
+
 
     /**
      * Bonus:
