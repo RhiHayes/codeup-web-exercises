@@ -405,21 +405,28 @@ function ancestors () {
 function helloBye(input1, input2) {
 
 
-    var name = input1.charAt(0).toUpperCase() + input1.slice(1);
-
-
     if (typeof input1 == "string") {
+        var name = input1.charAt(0).toUpperCase() + input1.slice(1);
         alert("You are " + name);
     }
 
-    else if (typeof input1 !== "string") {
+    else {
         alert("You didn't enter a name for the first input!");
     }
 
-    else {
-        console.log("Something went wrong.")
-    }
 
+     if (typeof input2 == "number") {
+        var num = parseInt(input2, 10);
+        console.log("User entered a number!");
+
+        if (num === 1) {
+            alert("Hello, " + name);
+        } else if (num === 0) {
+            alert("Bye, " + name);
+        } else if (num !== 1 || num !== 2) {
+            alert("You didn't enter a valid number for input 2!")
+        }
+    }
 
 }
 
