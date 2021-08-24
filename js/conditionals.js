@@ -402,7 +402,26 @@ function ancestors () {
  * The name you return must be capitalized.
  */
 
+function helloBye(input1, input2) {
 
+
+    var name = input1.charAt(0).toUpperCase() + input1.slice(1);
+
+
+    if (typeof input1 == "string") {
+        alert("You are " + name);
+    }
+
+    else if (typeof input1 !== "string") {
+        alert("You didn't enter a name for the first input!");
+    }
+
+    else {
+        console.log("Something went wrong.")
+    }
+
+
+}
 
 
 
