@@ -10,6 +10,26 @@ console.log("Test")
 // timesFour(true) //false
 // timesFour(null) //false
 
+function timesFour(input) {
+
+    if(isNaN(parseInt(input)) || Array.isArray(input)) {
+        return false;
+    }
+
+    return input * 4;
+
+}
+
+console.log(timesFour(0)) //0
+console.log(timesFour("5")) //20
+console.log(timesFour(-5)) //-20
+console.log(timesFour('Texas')) //false
+console.log(timesFour([2,1,0])) //false
+console.log(timesFour(true)) //false
+console.log(timesFour(null)) //false
+
+console.log("------------------")
+
 
 // Define a function named convertDaystoHours that takes in one input Days. Return the conversion of the number of days into total hours. If the input is not numeric or a numeric string, convertDaystoHours, should return false.
 // convertDaystoHours(0) //0
@@ -19,7 +39,25 @@ console.log("Test")
 // convertDaystoHours(true) //false
 // convertDaystoHours(false) //false
 
+function convertDaystoHours(days) {
 
+    if(isNaN(parseInt(days)) || Array.isArray(days)) {
+        return false;
+    }
+
+    return days * 24;
+
+}
+
+
+console.log(convertDaystoHours(0)) //0
+console.log(convertDaystoHours('5')) // 120
+console.log(convertDaystoHours('Texas')) //false
+console.log(convertDaystoHours([2, 1, 0])) //false
+console.log(convertDaystoHours(true)) //false
+console.log(convertDaystoHours(false)) //false
+
+console.log("------------------")
 
 
 
@@ -31,3 +69,24 @@ console.log("Test")
 // calculateTax([1, 2, 3], 10)      // false
 // calculateTax(“Codeup”, 100)      // false
 // calculateTax()                   // false
+
+function calculateTax(totalPaid, taxPercent) {
+
+    if(isNaN(parseInt(totalPaid)) || (isNaN(parseInt(taxPercent)) || Array.isArray(totalPaid || taxPercent))) {
+        return false;
+    }
+
+    var taxDollars = totalPaid * (taxPercent / 100)
+    var newTotal = totalPaid + taxDollars;
+
+    return "$" + newTotal + "0";
+
+}
+
+console.log(calculateTax(25, 8))				 // “$27.00"
+console.log(calculateTax(10, 12))            // “$11.20”
+console.log(calculateTax(120, 15.5))			 //	“$138.60"
+console.log(calculateTax(10, true))           // false
+console.log(calculateTax("Codeup", 100))      // false
+console.log(calculateTax([1, 2, 3], 10))      // false
+console.log(calculateTax())                                       // false
