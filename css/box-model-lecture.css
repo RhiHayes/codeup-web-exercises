@@ -1,11 +1,48 @@
-#box {
+#box1 {
     background-color: blue;
-    width: 500px;
-    height: 500px;
+    width: 100px;
+    height: 100px;
     padding: 20px 10px 20px 10px;
+    border: 5px solid black;
+    margin-top: 20px;
 }
 
 /* top, right, bottom, left! This is the
 order of the padding when presented with 4
 values!
  */
+
+#box2 {
+    box-sizing: border-box;
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    padding: 20px 10px 20px 10px;
+    border: 5px solid black;
+    margin-top: 20px;
+
+}
+
+/* NOTE FROM ME:
+
+BOX-SIZING IS VERY USEFUL!!!
+
+ */
+
+#box3 {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    padding: 20px 10px 20px 10px;
+    border: 5px solid black;
+    margin-top: 20px;
+}
+
+#box4 {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    padding: 20px 10px 20px 10px;
+    border: 5px solid black;
+    margin-top: 20px;
+}
