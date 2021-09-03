@@ -1,0 +1,11 @@
+#box {
+    background-color: blue;
+    width: 500px;
+    height: 500px;
+    padding: 20px 10px 20px 10px;
+}
+
+/* top, right, bottom, left! This is the
+order of the padding when presented with 4
+values!
+ */
