@@ -79,7 +79,9 @@ function calculateTax(totalPaid, taxPercent) {
     var taxDollars = totalPaid * (taxPercent / 100)
     var newTotal = totalPaid + taxDollars;
 
-    return "$" + newTotal + "0";
+    newTotal = newTotal.toFixed(2); // Adds two decimals!
+
+    return "$" + newTotal;
 
 }
 
