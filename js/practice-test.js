@@ -88,6 +88,7 @@ function calculateTax(totalPaid, taxPercent) {
 console.log(calculateTax(25, 8))				 // “$27.00"
 console.log(calculateTax(10, 12))            // “$11.20”
 console.log(calculateTax(120, 15.5))			 //	“$138.60"
+console.log(calculateTax(120, "10"))			 //	“$138.60"
 console.log(calculateTax(10, true))           // false
 console.log(calculateTax("Codeup", 100))      // false
 console.log(calculateTax([1, 2, 3], 10))      // false
