@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+a:hover {
+    color: blue;
+}
+
+a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    margin-left: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    font-family: 'Work Sans', sans-serif;
+    margin-left: auto;
+}
+
+.icon {
+    margin: auto;
+    transform: translate(-50%, -50%);
+}
+
+.gray-box {
+    background-color: lightgrey;
+    height: 100px;
+}
+
+.link-container {
+    text-align: left;
+    padding-top: 20px;
+}
+
+.icon-container {
+    text-align: right;
+    padding-bottom: 40px;
+}
+
+.logo-container {
+    text-align: center;
+}
