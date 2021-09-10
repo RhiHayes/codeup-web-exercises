@@ -10,7 +10,12 @@
         }
         body {
             margin: 0;
+            padding: 20px;
             font-weight: bold;
+        }
+
+        div {
+
         }
 
 
@@ -61,7 +66,6 @@
             background: #BFD45D;
             border: 2px solid #F9EFD6;
             padding: 1em;
-            list-style: none;
         }
 
 
@@ -79,11 +83,10 @@
             background: #BFD45D;
             border: 2px solid #F9EFD6;
             padding: 1em;
-            list-style: none;
         }
 
 
-        /* DIV FLEXBOX (COLUMN) */
+        /* DIV FLEXBOX (COLUMN-REVERSE) */
 
 
         .flex-container-colrev-1 {
@@ -97,9 +100,39 @@
             background: #BFD45D;
             border: 2px solid #F9EFD6;
             padding: 1em;
-            list-style: none;
         }
 
+
+        /* DIV FLEXBOX (JUSTIFY-CONTENT: FLEX-START/DEFAULT) */
+
+        .flex-container-jus-1 {
+            display: flex;
+            width: 100%;
+            border: 3px solid goldenrod;
+            justify-content: flex-start;
+        }
+
+        .flex-item-jus-1 {
+            background: #BFD45D;
+            border: 2px solid #F9EFD6;
+            padding: 1em;
+        }
+
+
+        /* DIV FLEXBOX (JUSTIFY-CONTENT: FLEX-END) */
+
+        .flex-container-jusend-1 {
+            display: flex;
+            width: 100%;
+            border: 3px solid goldenrod;
+            justify-content: flex-end;
+        }
+
+        .flex-item-jusend-1 {
+            background: #BFD45D;
+            border: 2px solid #F9EFD6;
+            padding: 1em;
+        }
 
     </style>
 
@@ -115,7 +148,7 @@
 <body>
 
 
-<h2>DIV Flexbox (DEFAULT/ FLEX-DIRECTION: ROW)</h2>
+<h2>DIV FLEXBOX (DEFAULT/ flex-direction: row)</h2>
 
 <div class="flex-container-df-1">
     <div class="flex-item-df-1">Item 1</div>
@@ -124,7 +157,7 @@
 </div>
 
 
-<h2>UL/LI Flexbox (DEFAULT/ FLEX-DIRECTION: ROW)</h2>
+<h2>UL/LI FLEXBOX (DEFAULT/ flex-direction: row)</h2>
 
 <ul class="flex-container-df-2">
     <li class="flex-list-item-df-1">Item 1.1</li>
@@ -140,9 +173,11 @@
     spacing while the DIV flexbox does not. I can only assume
     this is because the items are LI's.
 
+    ***Flex-direction tells the items which way to be ordered.***
+
     -->
 
-<h2>DIV Flexbox (FLEX-DIRECTION: ROW-REVERSE)</h2>
+<h2>DIV FLEXBOX (flex-direction: row-reverse)</h2>
 
 <div class="flex-container-rev-1">
     <div class="flex-item-rev-1">Item 1</div>
@@ -160,7 +195,7 @@
 
     -->
 
-<h2>DIV Flexbox (FLEX-DIRECTION: COLUMN)</h2>
+<h2>DIV FLEXBOX (flex-direction: column)</h2>
 
 <div class="flex-container-col-1">
     <div class="flex-item-col-1">Item 1</div>
@@ -177,7 +212,7 @@
 
     -->
 
-<h2>DIV Flexbox (FLEX-DIRECTION: COLUMN-REVERSE)</h2>
+<h2>DIV FLEXBOX (flex-direction: column-reverse)</h2>
 
 <div class="flex-container-colrev-1">
     <div class="flex-item-colrev-1">Item 1</div>
@@ -194,6 +229,45 @@
     that the items are lined up in.
 
     -->
+
+<h2>DIV FLEXBOX (justify-content: flex-start)</h2>
+
+<div class="flex-container-jus-1">
+    <div class="flex-item-jus-1">Item 1</div>
+    <div class="flex-item-jus-1">Item 2</div>
+    <div class="flex-item-jus-1">Item 3</div>
+</div>
+
+<!--
+
+    Here is the justified content items. The only difference between
+    this and the default is the addition of "justify-content:
+    flex-start;". Justifying the items did NOT work when
+    justify-content was put in the flex item class. "Justify-content:
+    flex start" looks just like the default flexbox, so justifying the
+    content isn't necessary in this scenario.
+
+    ***Justify content adjusts the HORIZONTAL direction the items go in.***
+
+    -->
+
+<h2>DIV FLEXBOX (justify-content: flex-end)</h2>
+
+<div class="flex-container-jusend-1">
+    <div class="flex-item-jusend-1">Item 1</div>
+    <div class="flex-item-jusend-1">Item 2</div>
+    <div class="flex-item-jusend-1">Item 3</div>
+</div>
+
+<!--
+
+    Here is justified content items. The only difference between
+    this and the default is the addition of "justify-content:
+    flex-end;". This pushed the items to the edge of the parent/flex
+    container.
+
+    -->
+
 
 </body>
 </html>
