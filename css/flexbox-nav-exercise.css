@@ -20,16 +20,19 @@ a {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: black;
 }
 
 .text {
     font-family: 'Work Sans', sans-serif;
     margin-left: auto;
+    justify-content: flex-end;
+    color: black;
 }
 
 .icon {
     margin: auto;
-    transform: translate(-50%, -50%);
+    color: black;
 }
 
 .gray-box {
@@ -38,15 +41,22 @@ a {
 }
 
 .link-container {
-    text-align: left;
-    padding-top: 20px;
+    display: flex;
+    list-style-type: none;
 }
 
 .icon-container {
-    text-align: right;
+    display: flex;
+    list-style-type: none;
     padding-bottom: 40px;
 }
 
 .logo-container {
-    text-align: center;
+    display: flex;
+    list-style-type: none;
+}
+
+.list-item-text {
+    flex-direction: column;
+    justify-content: center;
 }
