@@ -1,4 +1,6 @@
-/* * {
+/* MY REFACTORED CODE */
+
+* {
     box-sizing: border-box;
 }
 
@@ -8,7 +10,9 @@ a:hover {
 
 a {
     display: inline-block;
-    padding: 10px;
+    text-decoration: none;
+    color: black;
+    padding: 1.8em .5em;
 }
 
 .logo {
@@ -35,33 +39,31 @@ a {
     color: black;
 }
 
-.gray-box {
-    background-color: lightgrey;
-    height: 100px;
-}
-
-.link-container {
+.nav-container {
     display: flex;
-    list-style-type: none;
+    background-color: #848487;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
 }
 
-.icon-container {
-    display: flex;
-    list-style-type: none;
-    padding-bottom: 40px;
+
+ul {
+    list-style: none;
 }
 
-.logo-container {
-    display: flex;
-    list-style-type: none;
+.nav-container li:nth-of-type(4) {
+    /*TARGETS EVERYTHING ABOVE AND INCLUDING THE 4TH CHILD OF LI*/
+    margin-right: auto;
 }
 
-.list-item-text {
-    flex-direction: column;
-    justify-content: center;
+.logo {
+    position: absolute;
+    left: 50%;
 }
 
- */
+
+/* SHANSHAN'S CODE
 
 * {
     box-sizing: border-box;
@@ -102,12 +104,12 @@ ul {
     align-items: center;
     justify-content: flex-end;
     position: relative;
-    /* THE POSITION HAS TO BE RELATIVE ON THE PARENT OR ABSOLUTE WON'T WORK
-    PROPERLY */
+    THE POSITION HAS TO BE RELATIVE ON THE PARENT OR ABSOLUTE WON'T WORK
+    PROPERLY
 }
 
 .nav-container li:nth-of-type(4) {
-    /*  TARGETS EVERYTHING ABOVE AND INCLUDING THE 4TH CHILD OF LI   */
+    TARGETS EVERYTHING ABOVE AND INCLUDING THE 4TH CHILD OF LI
     margin-right: auto;
 }
 
@@ -115,5 +117,7 @@ ul {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    /*  TRANSFORM MOVES THE ELEMENT   */
+        TRANSFORM MOVES THE ELEMENT
 }
+
+ */
