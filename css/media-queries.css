@@ -60,6 +60,11 @@ footer {
     justify-content: space-between;
 }
 
+img {
+    width: 95vw;
+    padding-top: 6px;
+}
+
 /* DESKTOP VIEW */
 
 
