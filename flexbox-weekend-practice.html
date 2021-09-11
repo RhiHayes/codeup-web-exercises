@@ -3,149 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Flexbox Weekend Practice</title>
+    <link rel="stylesheet" href="css/flexbox-weekend-practice.css">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            padding: 20px;
-            font-weight: bold;
-        }
-
-        div {
-
-        }
-
-
-        /* DIV FLEXBOX (DEFAULT) */
-
-
-        .flex-container-df-1 {
-            display: flex;
-            width: 100%;
-            border: 3px solid goldenrod;
-        }
-
-        .flex-item-df-1 {
-            background: #BFD45D;
-            border: 2px solid #F9EFD6;
-            padding: 1em;
-        }
-
-
-        /* UL/LI FLEXBOX (DEFAULT) */
-
-
-        .flex-container-df-2 {
-            display: flex;
-            width: 100%;
-            border: 3px solid goldenrod;
-        }
-
-        .flex-list-item-df-1 {
-            background: #BFD45D;
-            border: 2px solid #F9EFD6;
-            padding: 1em;
-            list-style: none;
-        }
-
-
-        /* DIV FLEXBOX (ROW-REVERSE) */
-
-
-        .flex-container-rev-1 {
-            display: flex;
-            width: 100%;
-            border: 3px solid goldenrod;
-            flex-direction: row-reverse;
-        }
-
-        .flex-item-rev-1 {
-            background: #BFD45D;
-            border: 2px solid #F9EFD6;
-            padding: 1em;
-        }
-
-
-        /* DIV FLEXBOX (COLUMN) */
-
-
-        .flex-container-col-1 {
-            display: flex;
-            width: 100%;
-            border: 3px solid goldenrod;
-            flex-direction: column;
-        }
-
-        .flex-item-col-1 {
-            background: #BFD45D;
-            border: 2px solid #F9EFD6;
-            padding: 1em;
-        }
-
-
-        /* DIV FLEXBOX (COLUMN-REVERSE) */
-
-
-        .flex-container-colrev-1 {
-            display: flex;
-            width: 100%;
-            border: 3px solid goldenrod;
-            flex-direction: column-reverse;
-        }
-
-        .flex-item-colrev-1 {
-            background: #BFD45D;
-            border: 2px solid #F9EFD6;
-            padding: 1em;
-        }
-
-
-        /* DIV FLEXBOX (JUSTIFY-CONTENT: FLEX-START/DEFAULT) */
-
-        .flex-container-jus-1 {
-            display: flex;
-            width: 100%;
-            border: 3px solid goldenrod;
-            justify-content: flex-start;
-        }
-
-        .flex-item-jus-1 {
-            background: #BFD45D;
-            border: 2px solid #F9EFD6;
-            padding: 1em;
-        }
-
-
-        /* DIV FLEXBOX (JUSTIFY-CONTENT: FLEX-END) */
-
-        .flex-container-jusend-1 {
-            display: flex;
-            width: 100%;
-            border: 3px solid goldenrod;
-            justify-content: flex-end;
-        }
-
-        .flex-item-jusend-1 {
-            background: #BFD45D;
-            border: 2px solid #F9EFD6;
-            padding: 1em;
-        }
-
-    </style>
-
-    <!--
-
-     To start using flexbox to position items, you need to
-     include "display: flex;" in the parent element. Then,
-     the flex items will be allowed to move.
-
-     -->
 
 </head>
 <body>
+
+<!--
+
+   To start using flexbox to position items, you need to
+   include "display: flex;" in the parent element in CSS. Then,
+   the flex items will be allowed to move.
+
+   -->
 
 
 <h2>DIV FLEXBOX (DEFAULT/ flex-direction: row)</h2>
@@ -247,7 +117,7 @@
     flex start" looks just like the default flexbox, so justifying the
     content isn't necessary in this scenario.
 
-    ***Justify content adjusts the HORIZONTAL direction the items go in.***
+    ***Justify content adjusts the MAIN AXIS direction the items go in.***
 
     -->
 
@@ -268,6 +138,83 @@
 
     -->
 
+<h2>DIV FLEXBOX (justify-content: center)</h2>
+
+<div class="flex-container-juscen-1">
+    <div class="flex-item-juscen-1">Item 1</div>
+    <div class="flex-item-juscen-1">Item 2</div>
+    <div class="flex-item-juscen-1">Item 3</div>
+</div>
+
+<!--
+
+    Here is justified content items. The only difference between
+    this and the default is the addition of "justify-content:
+    center". This centered the items in the middle of the parent/flex
+    container.
+
+    -->
+
+<h2>DIV FLEXBOX (justify-content: space-between)</h2>
+
+<div class="flex-container-jusbe-1">
+    <div class="flex-item-jusbe-1">Item 1</div>
+    <div class="flex-item-jusbe-1">Item 2</div>
+    <div class="flex-item-jusbe-1">Item 3</div>
+</div>
+
+<!--
+
+    Here is justified content items. The only difference between
+    this and the default is the addition of "justify-content:
+    space-between". This spaced out the items inside the
+    parent/flex container. Notice that the first and third item are
+    pushed to the end of the container, while the second item remains
+    in the center. It's easy to get confused with "space-between",
+    "space-around", and "space-evenly".
+
+    -->
+
+<h2>DIV FLEXBOX (justify-content: space-around)</h2>
+
+<div class="flex-container-jusar-1">
+    <div class="flex-item-jusar-1">Item 1</div>
+    <div class="flex-item-jusar-1">Item 2</div>
+    <div class="flex-item-jusar-1">Item 3</div>
+</div>
+
+<!--
+
+    Here is justified content items. The only difference between
+    this and the default is the addition of "justify-content:
+    space-around". This spaced out the items inside the
+    parent/flex container. Notice that the first and third item are
+    NOT pushed to the edge of the container and instead have space around
+    them. Space-around gives each item EQUAL AMOUNT OF SPACE AROUND IT,
+    despite the flex container.
+
+    -->
+
+<h2>DIV FLEXBOX (justify-content: space-evenly)</h2>
+
+<div class="flex-container-jusev-1">
+    <div class="flex-item-jusev-1">Item 1</div>
+    <div class="flex-item-jusev-1">Item 2</div>
+    <div class="flex-item-jusev-1">Item 3</div>
+</div>
+
+<!--
+
+    Here is justified content items. The only difference between
+    this and the default is the addition of "justify-content:
+    space-evenly". This spaced out the items inside the
+    parent/flex container. Notice that the first and third item are
+    NOT pushed to the edge of the container and instead have space around
+    them. Also notice that "space-around" and "space-evenly" look similar,
+    but are NOT the same. Space-between gives EQUAL AMOUNT OF SPACE AROUND
+    ITEMS, **WHILE TAKING THE FLEX CONTAINER INTO ACCOUNT.**
+
+    -->
 
 </body>
 </html>
