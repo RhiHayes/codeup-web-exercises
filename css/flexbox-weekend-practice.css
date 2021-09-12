@@ -304,3 +304,69 @@ JUSTIFY-CONTENT OR ELSE THE ITEMS WON'T MOVE */
     border: 2px solid #F9EFD6;
     padding: 1em;
 }
+
+
+
+/* DIV FLEXBOX (PARAGRAPH-1) */
+
+.flex-container-para-1 {
+    display: flex;
+    width: 100%;
+    border: 3px solid goldenrod;
+    justify-content: flex-start;
+}
+
+.flex-item-para-1 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+
+
+/* DIV FLEXBOX (PARAGRAPH-2) */
+
+.flex-container-para-2 {
+    display: flex;
+    width: 100%;
+    border: 3px solid goldenrod;
+    justify-content: center;
+}
+
+.flex-item-para-2 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+
+
+/* DIV FLEXBOX (PARAGRAPH-3) */
+
+.flex-container-para-3 {
+    display: flex;
+    width: 100%;
+    border: 3px solid goldenrod;
+    justify-content: flex-end;
+}
+
+.flex-item-para-3 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+
+
+
+/* DIV FLEXBOX (3 PARAGRAPHS) */
+
+.flex-container-para-3-1 {
+    display: flex;
+    width: 100%;
+    border: 3px solid goldenrod;
+    justify-content: center;
+}
+
+.flex-item-para-3-1 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
