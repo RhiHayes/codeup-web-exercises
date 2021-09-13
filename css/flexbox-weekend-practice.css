@@ -458,3 +458,115 @@ JUSTIFY-CONTENT OR ELSE THE ITEMS WON'T MOVE */
     border: 2px solid #F9EFD6;
     padding: 1em;
 }
+
+
+/* DIV FLEXBOX (FLEX-DIRECTION: COLUMN; ALIGN-ITEMS: FLEX-START) */
+
+.flex-container-al-col-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    align-items: flex-start;
+    border: 3px solid goldenrod;
+}
+
+.flex-item-al-col-1 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+
+
+/* DIV FLEXBOX (FLEX-DIRECTION: COLUMN; ALIGN-ITEMS: FLEX-END) */
+
+.flex-container-alend-col-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    align-items: flex-end;
+    border: 3px solid goldenrod;
+}
+
+.flex-item-alend-col-1 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+
+
+
+/* DIV FLEXBOX (FLEX-DIRECTION: COLUMN; DEFAULT/ALIGN-ITEMS: STRETCH) */
+
+.flex-container-alst-col-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    align-items: stretch;
+    border: 3px solid goldenrod;
+}
+
+.flex-item-alst-col-1 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+
+
+/* DIV FLEXBOX (FLEX-DIRECTION: COLUMN; ALIGN-ITEMS: CENTER) */
+
+.flex-container-alcen-col-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    border: 3px solid goldenrod;
+}
+
+.flex-item-alcen-col-1 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+
+/* DIV FLEXBOX (FLEX-DIRECTION: COLUMN; ALIGN-ITEMS: BASELINE) */
+
+.flex-container {
+    display: flex;
+    align-items: baseline;
+    border: 5px solid goldenrod;
+    height: 300px;
+}
+.box1 {
+    font-size: 15px;
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+.box2 {
+    font-size: 30px;
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+.box3 {
+    font-size: 45px;
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+.box4 {
+    font-size: 60px;
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+.box5 {
+    font-size: 75px;
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
