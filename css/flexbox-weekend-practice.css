@@ -422,3 +422,39 @@ JUSTIFY-CONTENT OR ELSE THE ITEMS WON'T MOVE */
     border: 2px solid #F9EFD6;
     padding: 1em;
 }
+
+
+
+
+/* DIV FLEXBOX (ALIGN ITEMS: STRETCH) */
+
+.flex-container-alst-1 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: stretch;
+    border: 3px solid goldenrod;
+}
+
+.flex-item-alst-1 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
+
+
+/* DIV FLEXBOX (ALIGN ITEMS: CENTER) */
+
+.flex-container-alcen-1 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    border: 3px solid goldenrod;
+}
+
+.flex-item-alcen-1 {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
