@@ -48,7 +48,45 @@
         <h1 class="display-4">Welcome to Pizza World!</h1>
     </div>
 
+<!-- BOOTSTRAP EXPLANATION FOR MYSELF:
 
+Okay, so this exercise was a lot harder than the grid one. So, WHAT"S
+GOING ON?! That's what I'm here to explain.
+
+So everything is pretty self-explanatory EXCEPT for how I got to link
+each form under each tab. If I'm understanding the code correctly, lines
+63-73 on my code are labeling the nav links and tabs.
+
+
+See how on line 65 the role is equal to "tablist". Then, under that,
+each list item has different properties that help them be identified.
+
+ID, data-toggle, href, and role are the main ones controlling which tab goes
+to which form.
+
+
+Now let's look at how they're actually being linked. Notice how under each
+tab-content div, there is another div with the classes "tab-pane", "ID", and
+"role". THIS is the div that links everything together and puts your lists
+under the tabs as stated through lines 63-73.
+
+
+To look at these divs for each form, here's the lines:
+
+Lines 96-139- Size and Crust Form
+
+Lines 143-199- Cheese and Sauce Form
+
+Lines 211-275- Toppings Form
+
+
+
+IMPORTANT NOTE: DO NOT COPY THE DIV ABOVE THE "TAB-PANE" DIV (tab-content).
+IF you put this above every form, EVERYTHING WON'T BE SORTED. I don't know
+why that is, but just trust me. Don't do it.
+
+
+-->
 
 <h2>Build your own pizza!</h2>
 <ul class="nav nav-tabs" id="byop" role="tablist">
@@ -111,7 +149,7 @@
         </div>
     </div>
 
-    <div class="tab-pane " id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
+    <div class="tab-pane" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
         <div class="card" >
             <h5 class="card-header bg-primary text-light">Choose Cheese and Sauce</h5>
             <div class="card m-4">
