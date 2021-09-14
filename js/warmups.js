@@ -131,7 +131,43 @@ console.log(calculateDogAge(3, 21))
 console.log(calculateDogAge(5, 30))
 
 
+/* WARM UP DATE: 9/14/21
 
 
+Given arrays of strings that are orders of food in string form to your
+function, write a function named tacoTuesday that returns TRUE or FALSE if
+the array provided has any element mention the word ‘taco’ in its value.
+
+
+ */
+
+var hasTacos = ["blueberry muffin", "banana", "yogurt", "cereal",
+"brisket and egg taco"];
+
+var noTacos = ["parfait", "omlette de frumage", "protein shake", "fasting"];
+tacoTuesday(hasTacos) //true
+tacoTuesday(noTacos) //false
+
+function tacoTuesday(arr) {
+
+    for (var i = 0; i < arr.length; i++) {
+//This loop is saying that it NOT go above the length of the input.
+
+
+        if (arr[i].includes("taco")) {
+            return true;
+        }
+//This is saying while the if is in the loop, it will look through to find
+// a taco.
+
+
+    }
+        return false;
+}
+
+// It breaks out of the loop once done and returns false.
+
+console.log(tacoTuesday(hasTacos));
+console.log(tacoTuesday(noTacos));
 
 
