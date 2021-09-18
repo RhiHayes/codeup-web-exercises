@@ -187,3 +187,37 @@ whatAWednesday(customer1Order) // “Your order included chicken sandwiches, so 
 whatAWednesday(customer2Order) // “Your order did not include any chicken sandwiches - salright, our burgers are cooked fresh too! You ordered a total of 2 burgers.”
 
  */
+
+var customer1Order = ["what-a-burger", "what-a-burger", "what-a-chicken", "what-a-chicken"];
+var customer2Order = ["what-a-burger", "fries", "what-a-burger"];
+
+
+/* Step 1: Need to create a loop that goes through the array.
+
+   Step 2: Need an if statement to find the occurrence of a word AND
+   to loop through the array to check how many times this word pops up.
+   I also need to be able to store this value somehow...
+
+   Step 3: repeat step 2, but for a different keyword.
+ */
+
+
+
+function whatAWednesday(arr) {
+
+    for (var i = 0; i < arr.length; i++) {
+//This loop is saying that it NOT go above the length of the input.
+
+        if (arr[i].includes("burger")) {
+            //Need some kind of loop here and a variable to store things?
+        }
+//This is saying while the if is in the loop, it will look through to find
+// a burger.
+
+    }
+
+    return 0;
+}
+
+whatAWednesday(customer1Order);
+whatAWednesday(customer2Order);
