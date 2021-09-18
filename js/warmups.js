@@ -171,3 +171,19 @@ console.log(tacoTuesday(hasTacos));
 console.log(tacoTuesday(noTacos));
 
 
+
+/* Write a function named whatAWednesday that takes in an array of
+strings representing sandwiches ordered - it’s a busy Wednesday, so
+we’re getting in tons of orders for burgers and chicken like so:
+
+var customer1Order = [“what-a-burger”, “what-a-burger”, “what-a-chicken”, “what-a-chicken”];
+var customer2Order = [“what-a-burger”, “fries”, “what-a-burger”]
+
+whatAWednesday should return to me a formatted string that counts the number of burgers
+and chicken sandwiches respectively and lets me know if that order had any
+ chicken in it.
+
+whatAWednesday(customer1Order) // “Your order included chicken sandwiches, so we’re getting those made for you! You ordered a total of 2 burgers and 2 chicken sandwiches.”
+whatAWednesday(customer2Order) // “Your order did not include any chicken sandwiches - salright, our burgers are cooked fresh too! You ordered a total of 2 burgers.”
+
+ */
