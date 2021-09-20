@@ -10,8 +10,8 @@
 <button id="defuser">Defuse the BOM</button>
 
 <script>
-    (function() {
-        "use strict";
+    // (function() {
+    //     "use strict";
 
         var detonationTimer = 5;
 
@@ -27,10 +27,12 @@
             detonationTimer--;
         }
 
+    var update = setInterval(updateTimer, 1000);
+
         // TODO: When this function runs, it needs to
         // cancel the interval/timeout for updateTimer()
         function defuseTheBOM() {
-
+            clearInterval(update);
         }
 
         // Don't modify anything below this line!
@@ -40,7 +42,7 @@
         // We will learn about events in the DOM lessons
         var defuser = document.getElementById('defuser');
         defuser.addEventListener('click', defuseTheBOM);
-    })();
+    // })();
 </script>
 </body>
 </html>
