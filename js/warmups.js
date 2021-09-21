@@ -188,8 +188,8 @@ whatAWednesday(customer2Order) // “Your order did not include any chicken sand
 
  */
 
-var customer1Order = ["what-a-burger", "what-a-burger", "what-a-chicken", "what-a-chicken"];
-var customer2Order = ["what-a-burger", "fries", "what-a-burger"];
+// var customer1Order = ["what-a-burger", "what-a-burger", "what-a-chicken", "what-a-chicken"];
+// var customer2Order = ["what-a-burger", "fries", "what-a-burger"];
 
 
 /* Step 1: Need to create a loop that goes through the array.
@@ -203,21 +203,62 @@ var customer2Order = ["what-a-burger", "fries", "what-a-burger"];
 
 
 
-function whatAWednesday(arr) {
+// function whatAWednesday(arr) {
+//
+//     for (var i = 0; i < arr.length; i++) {
+// //This loop is saying that it NOT go above the length of the input.
+//
+//         if (arr[i].includes("burger")) {
+//             //Need some kind of loop here and a variable to store things?
+//         }
+// //This is saying while the if is in the loop, it will look through to find
+// // a burger.
+//
+//     }
+//
+//     return 0;
+// }
+//
+// whatAWednesday(customer1Order);
+// whatAWednesday(customer2Order);
 
-    for (var i = 0; i < arr.length; i++) {
-//This loop is saying that it NOT go above the length of the input.
 
-        if (arr[i].includes("burger")) {
-            //Need some kind of loop here and a variable to store things?
+
+
+/*WARM UP DATE: 9/21/21
+
+NOTE FROM ME:
+
+For the for loop on the second parameter, I wrote this initially:
+
+i <= input.length
+
+when the correct answer was
+
+i <= input
+
+I think .length is used for strings or collections or something,
+so it didn't work with a single number. Lesson learned!
+
+ALSO console log i, not the input. If you don't console.log i,
+it wont print out every individual number. If you log input, it'll
+only log how many times an even number was found and WON'T show it.
+
+
+ */
+
+function logEvens(input) {
+
+    for(var i = 0; i <= input; i++) {
+
+        if(i % 2 === 0) {
+            console.log(i);
         }
-//This is saying while the if is in the loop, it will look through to find
-// a burger.
 
     }
 
-    return 0;
+
 }
 
-whatAWednesday(customer1Order);
-whatAWednesday(customer2Order);
+logEvens(10);
+logEvens(8);
