@@ -25,6 +25,17 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<div class="d-flex w-100 justify-content-around mt-4">
+
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <button id="btn4">Button 4</button>
+
+</div>
+
+
+
 <script>
     (
     function() {
@@ -36,14 +47,26 @@
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
+
+        var button1 = function () {
+            mainHeader.innerHTML = 'JavaScript is Cool';
+        }
+        document.getElementById('btn1').addEventListener('click', button1);
+
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
 
-        subHeader.style["color"] = "blue";
+        // subHeader.style["color"] = "blue";
+
+        var button2 = function () {
+            subHeader.style["color"] = "blue";
+        }
+        document.getElementById('btn2').addEventListener('click', button2);
+
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
@@ -55,35 +78,62 @@
     //The loop is going through every list item until it reaches the end
     //of the list.
 
-    for (var i = 0; i < listItems.length; i++) {
+    // for (var i = 0; i < listItems.length; i++) {
+    //
+    //  //The if statement is saying that if the incrementer is NOT divisible
+    //  //by two with a remainder of zero, it will turn every other list item
+    //  //gray.
+    //
+    //  //Outside of the loop, the listItems statement is saying that the list
+    //  //item at the 0 index (the first item in JS), it will turn blue.
+    //
+    //     if(i % 2 !== 0) {
+    //
+    //         listItems[i].style.color = "grey";
+    //
+    //     }
+    //
+    //     listItems[0].style.color = 'blue';
+    // }
 
-     //The if statement is saying that if the incrementer is NOT divisible
-     //by two with a remainder of zero, it will turn every other list item
-     //gray.
+        var button3 = function () {
+            for (var i = 0; i < listItems.length; i++) {
 
-     //Outside of the loop, the listItems statement is saying that the list
-     //item at the 0 index (the first item in JS), it will turn blue.
+                if(i % 2 !== 0) {
 
-        if(i % 2 !== 0) {
+                    listItems[i].style.color = "grey";
 
-            listItems[i].style.color = "grey";
+                }
+
+                listItems[0].style.color = 'blue';
+            }
 
         }
 
-        listItems[0].style.color = 'blue';
-    }
+        document.getElementById('btn3').addEventListener('click', button3);
+
+
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished!";
+        // subParagraphs[0].innerText = "Mission Accomplished!";
         // Calls the first instance of this class and edits the text,
         // NOT the body.
+
+        var button4 = function () {
+            subParagraphs[0].innerText = "Mission Accomplished!";
+        }
+
+        document.getElementById('btn4').addEventListener('click', button4);
 
 
     })();
 </script>
+
+
+
 </body>
 </html>
