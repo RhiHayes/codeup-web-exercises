@@ -262,3 +262,30 @@ function logEvens(input) {
 
 logEvens(10);
 logEvens(8);
+
+/* WARM UP DATE: 9/22/21
+
+All I did was add an else if statement to my pre-existing
+code and added a string stating that this was an even or odd
+number. It's pretty easy once you understand your loops!
+
+
+ */
+
+function logNum(input) {
+
+    for(var i = 0; i <= input; i++) {
+
+        if(i % 2 === 0) {
+            console.log(i + " is an even number.");
+        } else if (i % 2 === 1) {
+            console.log(i + " is an odd number.")
+        }
+
+    }
+
+
+}
+
+logNum(10);
+logNum(8);
