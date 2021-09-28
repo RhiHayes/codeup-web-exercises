@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Selectors</title>
+</head>
+<body>
+
+<div>
+  <h1 id="main-heading">Welcome!</h1>
+    <h2 id="codeup">Hello Codeup!</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <ul id="full-list">
+
+    <li class="num-list">One</li>
+    <li class="num-list">Two</li>
+    <li class="num-list">Three</li>
+
+  </ul>
+
+  <p class="work-bock">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+
+<!--where is jQuery? We need to go get our CDN: -->
+<script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+
+<script>
+
+  var mainHeading = document.getElementById("main-heading");
+  mainHeading.style.color = "blue";
+
+
+  //jQuery('selector');
+  $("codeup").css('color', 'blue');
+
+  $(".num-list").css("background-color", "yellow").css("margin", "2px").html("<strong>Hello</strong>");
+
+  $("p, .num-list").css("font-size", "20px");
+
+  $("*").css("border", "1px solid red").css("padding", "10px");
+
+</script>
+
+
+</body>
+</html>
