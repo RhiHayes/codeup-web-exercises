@@ -1,0 +1,18 @@
+.title {
+    padding: 50px;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+}
+
+.code {
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.background-image {
+    background-image: url("https://image.freepik.com/vector-gratis/fondo-abstracto-lluvia-pixeles_23-2148383734.jpg");
+    background-size: cover;
+}
