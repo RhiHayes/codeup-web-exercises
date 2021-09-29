@@ -23,7 +23,7 @@
     &nbsp;<i class="bi bi-arrow-right-circle-fill"></i><!-- Right -->
     &nbsp;B ,&nbsp;A ,&nbsp;enter &nbsp;"<br>
     for a surprise!</p>
-
+<p class="code" id="mine">Warning: don't type the ghost of Minecraft's name.</p>
 
 
 
@@ -35,6 +35,8 @@
     var myKeys = "";
     var konamiCode = ["38", "38", "40", "40", "37", "39", "37", "39", "66", "65", "13"].join("");
     console.log(konamiCode);
+    var mineCode = ["72", "69", "82", "79", "66", "82", "73", "78", "69"].join("");
+    console.log(mineCode);
 
 
     $(document).keyup(function(event){
@@ -44,10 +46,21 @@
 
         if(myKeys === konamiCode) {
             alert("WOW! You got 30 lives!");
+        } else if (myKeys === mineCode) {
+            alert("JUMPSCARE!!!");
         }
 
 
     });
+
+    $("#mine").hover(function() {
+            $(this).css("color", "red")
+        },
+
+        function() {
+            $(this).css("color", "white")
+        });
+
 </script>
 </body>
 </html>
