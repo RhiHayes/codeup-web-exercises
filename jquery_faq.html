@@ -186,12 +186,14 @@
 
     });
 
-    $("li").click(function(event) {
+    $("li").click(function() {
 
-        event.preventDefault();
-        $("ul li:nth-child(1)").addClass("blue");
+        $("ul").each(function() {
 
-    });
+            $(this).children().first().addClass("blue");
+
+        })
+    })
 
 
 </script>
