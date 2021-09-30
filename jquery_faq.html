@@ -19,7 +19,6 @@
             color: blue;
         }
 
-
     </style>
     <meta charset="UTF-8">
     <title>jQuery FAQ Exercise</title>
@@ -159,11 +158,16 @@
 <script>
     "use strict";
 
+    /* Add all of your classes here */
+
     $("dd").addClass("invisible");
 
     $("ul li:nth-last-child(1)").addClass("highlight");
 
     $("ul li:nth-child(1)").addClass("bold");
+
+
+    /* Toggle the classes down here! */
 
     $(document).ready(function() {
 
@@ -188,6 +192,11 @@
         $("ul li:nth-child(1)").toggleClass("bold");
 
     });
+
+    /* Refactored my code to use built-in JS methods. This doesn't work for the other
+    ones because li is a direct child of ul, while h3 has NO children, thus ul
+    li:nth-child is used. I think my first function can be refactored this way too but
+    I haven't gotten there yet. */
 
     $("li").click(function() {
 
