@@ -161,6 +161,9 @@
 
     $("dd").addClass("invisible");
 
+    $("ul li:nth-last-child(1)").addClass("highlight");
+
+    $("ul li:nth-child(1)").addClass("bold");
 
     $(document).ready(function() {
 
@@ -175,14 +178,14 @@
     $("#button-1").click(function(event) {
 
         event.preventDefault();
-        $("ul li:nth-last-child(1)").addClass("highlight");
+        $("ul li:nth-last-child(1)").toggleClass("highlight");
 
     });
 
     $("h3").click(function(event) {
 
         event.preventDefault();
-        $("ul li:nth-child(1)").addClass("bold");
+        $("ul li:nth-child(1)").toggleClass("bold");
 
     });
 
@@ -190,7 +193,7 @@
 
         $("ul").each(function() {
 
-            $(this).children().first().addClass("blue");
+            $(this).children().first().toggleClass("blue");
 
         })
     })
