@@ -1,10 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+
+        .invisible {
+            visibility: hidden;
+        }
+
+
+    </style>
     <meta charset="UTF-8">
     <title>jQuery FAQ Exercise</title>
 </head>
 <body>
+
+<p>FAQ: Anime</p>
+<a href="#" id="toggle">Click to toggle the answers of the questions.</a>
+
+
+<dl>
+    <dt>1. What IS anime?</dt>
+    <dd>Anime is an English name for the style and art for animation by
+        Japanese culture. It comes in all different kinds of genres.</dd>
+
+    <br>
+
+    <dt>2. Why do they all have huge eyes?</dt>
+    <dd>The theory of big anime representing Asian ethnicity is wrong,
+        and not all anime artists draw huge eye styles. Another theory
+        is that the Japanese focus on expression and emotion, and eyes were
+        the key factor to use in doing so. Honestly, no one is 100% sure why
+        animes have a habit of doing this. However, Osama Tezuka, the creator
+        of Astro Boy, was the first to use this style and other artists just
+        followed.</dd>
+
+    <br>
+
+    <dt>3. Why are English words sometimes said in Japanese songs?</dt>
+    <dd>Because English in Japan is considered “cool”, especially with the
+        younger generation. There are alot of roots of English words borrowed
+        in Japanese as well.</dd>
+
+    <br>
+
+    <dt>4. What do -Chan, -San, -Sama, and all the other words stuck onto the end of
+        Japanese names mean?</dt>
+    <dd>This is like saying “Mr.” and “Mrs.” in the English language. They are also based
+        on the speaker’s rank in society. They are also usually not gender-oriented.</dd>
+
+    <br>
+
+    <dt>5. Who created anime, and when?</dt>
+    <dd>The art form we now call "anime" doesn't have a specific birthdate,
+        and it wasn't exactly created by anyone. But, partly as a result of being
+        either the first or among the first to use the big-eyed style, Tezuka Osamu
+        is generally considered the "father" of anime. He started creating comics in
+        1947, which were extremely popular, and at the beginning of 1963 Tetsuwan
+        Atomu (known outside Japan as Astro Boy) began airing. That is generally
+        considered the first anime-style animated production.</dd>
+
+    <br>
+
+    <dt>6. What is the difference between anime and cartoons?</dt>
+    <dd>In truth, there is a debate among the anime community as to the specific
+        differences between anime and cartoons. Some of the key points people argue
+        are the distinct differences between the art styles, the origin and influences
+        of the animation, the targeted audience, and the cultural differences.
+        Some even argue that the word “anime” is simply synonymous and interchangeable
+        with the term “cartoon.”</dd>
+
+    <br>
+
+    <dt>7. Is anime just for kids?</dt>
+    <dd>Nope! Anime is for everyone. Just as there are different genres for movies and
+        books, so too are there different genres for anime. There are some anime that
+        appear childish in a manner of either the art style, the voice acting or the
+        story itself, and to some that might be more appealing than a dark and dramatic
+        story, or a scary horror anime.</dd>
+
+    <br>
+
+    <dt>8. What is the difference between subbed and dubbed? Which should I watch?</dt>
+    <dd>These terms refer to the audio used in an anime, specifically whether it is original audio
+        (such as in Japanese) with subtitles in a language viewers can understand, or
+        if it is dubbed meaning that there are voice actors using a different
+        language other than the original audio to voice the characters of the show.
+        As for which one you should watch, it’s a matter of opinion. If you prefer to
+        watch something in the original audio with subtitles in the language you speak,
+        then go for it! If you don’t like the hassle of trying to read and watch at the
+        same time, then maybe watching in dubbed is a better choice for you? Or perhaps
+        the anime you are watching is only available to watch in one language, whether
+        that is dubbed or subbed? Either way it is a matter of opinion and choice.</dd>
+
+    <br>
+
+    <dt>9. You mention manga on occasion, what is it?</dt>
+    <dd>Many anime are based on or adapted from popular manga. Manga are similar to
+        comic books. Manga are usually read in a traditional format from right to left
+        instead of the normal left to right, beginning in the top right hand corner and
+        moving downwards. Manga is also generally in black and white, depending on the
+        type or genre of Manga. Although sometimes manga can have featured colored
+        pages.</dd>
+
+    <br>
+
+    <dt>10. What is an otaku?</dt>
+    <dd>Otaku is a term used to refer to an individual, or a group of individuals,
+        that enjoy anime and anime culture. Otaku, although it used to be used as a
+        somewhat derogatory term, is now used more similarly to the usage of the words
+        “dork,” “nerd,” and “geek,” and have less of a negative connotation.</dd>
+
+</dl>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<!--CUSTOM SCRIPT-->
+<script>
+    "use strict";
+
+    $("dd").addClass("invisible");
+
+
+    $(document).ready(function() {
+
+        $("#toggle").click(function(event) {
+
+            event.preventDefault();
+            $("dd").toggleClass("invisible");
+
+        });
+
+    });
+
+</script>
+
 
 </body>
 </html>
