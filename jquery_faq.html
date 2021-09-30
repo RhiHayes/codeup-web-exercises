@@ -7,6 +7,18 @@
             visibility: hidden;
         }
 
+        .highlight {
+            background-color: yellow;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .blue {
+            color: blue;
+        }
+
 
     </style>
     <meta charset="UTF-8">
@@ -112,6 +124,34 @@
 
 </dl>
 
+<h1>Random Anime Facts</h1>
+
+<h3>My Hero Academia</h3>
+    <ul>
+        <li>Bakugo was supposed to be a nice guy</li>
+        <li>Tsuyu & Hakagure started off as boys</li>
+        <li>Ochaco was meant to have Mt. Lady's powers</li>
+        <li>Superman could kick All Might's butt</li>
+    </ul>
+
+<h3>Attack On Titan</h3>
+<ul>
+    <li>'Attack on Titan' started as a one-shot manga</li>
+    <li>Levi Ackerman is in his 30s</li>
+    <li>Hanji Zoe's gender is ambiguous</li>
+    <li>There is an Attack on Titan theme park</li>
+</ul>
+
+<h3>Soul Eater</h3>
+<ul>
+    <li>Crona has no gender</li>
+    <li>Death The Kid can't dye his hair</li>
+    <li>Stein is the strongest graduate of the DWMA</li>
+    <li>Soul Eater is the scythe that Maka uses</li>
+</ul>
+
+<button type="button" id="button-1">Click Me!</button>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
@@ -130,8 +170,29 @@
             $("dd").toggleClass("invisible");
 
         });
+    });
+
+    $("#button-1").click(function(event) {
+
+        event.preventDefault();
+        $("ul li:nth-last-child(1)").addClass("highlight");
 
     });
+
+    $("h3").click(function(event) {
+
+        event.preventDefault();
+        $("ul li:nth-child(1)").addClass("bold");
+
+    });
+
+    $("li").click(function(event) {
+
+        event.preventDefault();
+        $("ul li:nth-child(1)").addClass("blue");
+
+    });
+
 
 </script>
 
