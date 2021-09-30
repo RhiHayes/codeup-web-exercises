@@ -162,10 +162,6 @@
 
     $("dd").addClass("invisible");
 
-    $("ul li:nth-last-child(1)").addClass("highlight");
-
-    $("ul li:nth-child(1)").addClass("bold");
-
 
     /* Toggle the classes down here! */
 
@@ -182,30 +178,28 @@
     $("#button-1").click(function(event) {
 
         event.preventDefault();
-        $("ul li:nth-last-child(1)").toggleClass("highlight");
+        $("ul li:nth-last-child(1)").addClass("highlight");
 
     });
 
     $("h3").click(function(event) {
 
         event.preventDefault();
-        $("ul li:nth-child(1)").toggleClass("bold");
+        $("ul li:nth-child(1)").addClass("bold");
 
     });
 
-    /* Refactored my code to use built-in JS methods. This doesn't work for the other
-    ones because li is a direct child of ul, while h3 has NO children, thus ul
-    li:nth-child is used. I think my first function can be refactored this way too but
-    I haven't gotten there yet. */
+    $("li").click(function(event) {
 
-    $("li").click(function() {
+        event.preventDefault();
+        $("ul li:nth-child(1)").addClass("blue");
 
-        $("ul").each(function() {
+    });
 
-            $(this).children().first().toggleClass("blue");
+    /* Restored default; I thought you had to be able to toggle each of these,
+    * but I was wrong. Everything works as it should. */
 
-        })
-    })
+
 
 
 </script>
