@@ -67,15 +67,18 @@ $.ajax("https://hookb.in/r1WmxGypxYcqk2XXk2a8",
 // Asynchronous - be careful presuming your data is coming back with immediacy
 //
 //
-$(document).ready(function(){
-    console.time("recipeAPI");
-    var randomFact = $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data){
-        console.log(randomFact)
-    });
-    console.timeEnd("recipeAPI");
-})
+// $(document).ready(function(){
+//     console.time("recipeAPI");
+//     var randomFact = $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data){
+//         console.log(randomFact)
+//     });
+//     console.timeEnd("recipeAPI");
+// })
 
 // Different MS = different response times BACK from our API
+
+// ~~~Handling AJAX responses ~~~
+
 
 // .done - when our process is complete [done], do the following [callback function]
 //
@@ -100,11 +103,13 @@ $(document).ready(function(){
 // $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data, status, jqXhr) {
 //     alert("Everything went great! Check out the server's response in the console.");
 //     console.log(data);
-// }).fail(function(jqXhr, status, error) {
+// })
+//     .fail(function(jqXhr, status, error) {
 //     alert("There was an error! Check the console for details");
 //     console.log("Response status: " + status);
 //     console.log("Error object: " + error);
-// }).always(function() {
+// })
+//     .always(function() {
 //     alert("This function always runs!");
 // });
 
@@ -151,4 +156,4 @@ $(document).ready(function(){
 //
 //         })
 //     })
-//
+// //
