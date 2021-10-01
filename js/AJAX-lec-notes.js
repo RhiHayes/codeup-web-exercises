@@ -1,68 +1,82 @@
 // AJAX - Asynchronous JavaScript and XML (We aren't going to worry much about the XML part for this course).
-​
+
 // AJAX requests will often employ the use of an API (Application Programming Interface), or JSON file and return us information using JavaScript Object Notation (JSON).
-​
+
 // A JSON object will often look like this:
-​
+
 var obj = {
     "key": "value",
     "number": 45,
     "arr": [1, 2, 3]
 };
-​
-​
+
+
 // Notice that the largest difference is the keys are strings (in double quotes).
-//
-// console.log(obj.key);
-// console.log(obj.number);
-// console.log(obj.arr);
-​
 // We still interact with this object just the same.
-​
+
+console.log(obj.key);
+console.log(obj.number);
+console.log(obj.arr);
+
+
+
 // ~*~ .ajax and some introductory requests ~*~
 // .ajax :: our first API request
-​
-// // .ajax(url) - without any OPTIONS, defaults to a GET request:
-// $.ajax("putHookbinLinkHere").done(function(data){
-//     console.log(data);
-// })
-​
+
+// .ajax(url) - without any OPTIONS, defaults to a GET request:
+// $.ajax("https://hookb.in/r1WmxGypxYcqk2XXk2a8")
+
 // .ajax also has a wealth of options we can use in our efforts as programmers:
 // This example: Send out a POST request with some DATA
-// $.ajax("",
-//     {
-//         type: "POST",
-//         data: {
-//             cohort: "Quasar",
-//             type: "Web Development",
-//             yearStarted: 2021
-//         }
-//     })
-​
+$.ajax("https://hookb.in/r1WmxGypxYcqk2XXk2a8",
+    //is still the first argument
+    {
+        type: "POST",
+        data: {
+            cohort: "Quasar",
+            type: "Web Development",
+            yearStarted: 2021
+        }
+    })
+
+//MY EXAMPLE
+
+$.ajax("https://hookb.in/r1WmxGypxYcqk2XXk2a8",
+    //is still the first argument
+    {
+        type: "POST",
+        data: {
+            name: "Rhiannon",
+            location: "Spring Branch, TX",
+            zip: 78070
+        }
+    })
+
+
 //TODO: Before we move on: Let's GET a random recipe together :)
 // Help me finish the following AJAX method to console.log the data that comes back!
 // https://www.themealdb.com/ < main website url
 // https://www.themealdb.com/api.php < api documentation main page (hint: looks like there's some kind of URL beneath the 'lookup a single random meal' heading. . and our AJAX method is looking for a url)
-​
-// $.ajax("url").done(function(data){
-// //do something with data here})
-​
+
+// $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data) {
+// console.log(data);
+// })
 // ~*~ working with responses ~*~
-​
-​
+
+
 // Asynchronous - be careful presuming your data is coming back with immediacy
 //
 //
-// $(document).ready(function(){
-//     console.time("recipeAPI");
-//     var randomFact = $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data){
-//         console.log(randomFact)
-//     });
-//     console.timeEnd("recipeAPI");
-// })
-​
+$(document).ready(function(){
+    console.time("recipeAPI");
+    var randomFact = $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data){
+        console.log(randomFact)
+    });
+    console.timeEnd("recipeAPI");
+})
+
 // Different MS = different response times BACK from our API
-​
+
 // .done - when our process is complete [done], do the following [callback function]
 //
 // $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data, status, jqXhr){
@@ -72,16 +86,16 @@ var obj = {
 //     console.log(data);
 //     // console.log(jqXhr);
 // });
-​
+
 // Above, we've used two parameters in our .done callback function: status and data for different purposes
-​
-​
+
+
 // .done is not our only option to hookup callback functions to:
-​
+
 // .done = when request completed successfully, do this stuff (callback function)
 // .fail = when request completed unsuccessfully, do this stuff (callback function)
 // .always = always do this stuff (callback function)
-​
+
 // In action:
 // $.ajax("https://www.themealdb.com/api/json/v1/1/random.php").done(function(data, status, jqXhr) {
 //     alert("Everything went great! Check out the server's response in the console.");
@@ -93,10 +107,10 @@ var obj = {
 // }).always(function() {
 //     alert("This function always runs!");
 // });
-​
+
 //Notice that .done and .fail will run one or the other dependent on the outcome, they are exclusive to each other
-​
-​
+
+
 // // Putting our ideas into some motion:
 // //Our user wants to CLICK A BUTTON and have a RANDOM RECIPE show to them in the view
 // //
