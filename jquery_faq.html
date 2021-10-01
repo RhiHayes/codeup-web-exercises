@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
 
-        .invisible {
-            visibility: hidden;
-        }
 
         .highlight {
             background-color: yellow;
@@ -149,12 +147,15 @@
     <li>Soul Eater is the scythe that Maka uses</li>
 </ul>
 
-<button type="button" id="button-1">Click Me!</button>
+<button id="button-1">Click Me!</button>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 <!--CUSTOM SCRIPT-->
+
+<!-- This code got all messed up somehow...I'll come back to fix it.-->
+
 <script>
     "use strict";
 
@@ -167,13 +168,21 @@
 
     $(document).ready(function() {
 
+    $("a").click(function(e) {
+        e.preventDefault();
+        $("dd").toggleClass("invisible");
+    )};
+
+
+
+
         $("#toggle").click(function(event) {
 
             event.preventDefault();
             $("dd").toggleClass("invisible");
 
         });
-    });
+
 
     $("#button-1").click(function(event) {
 
@@ -195,6 +204,7 @@
         $("ul li:nth-child(1)").addClass("blue");
 
     });
+});
 
     /* Restored default; I thought you had to be able to toggle each of these,
     * but I was wrong. Everything works as it should. */
