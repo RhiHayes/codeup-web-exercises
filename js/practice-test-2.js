@@ -1,5 +1,8 @@
 console.log("Hi!");
 
+
+/* ~~~~~DONE~~~~~ */
+
 /**
  * Find the Smallest and Biggest Numbers
  * Create a function named minMax that takes an array of numbers and return both the minimum and maximum numbers, in that order.
@@ -46,6 +49,9 @@ console.log(minMax([2334454, 5]));
 console.log(minMax([1]));
 
 
+
+/* ~~~~~NOT DONE~~~~~ */
+
 /**
  * Filter out Strings from an Array
  * Create a function named filterArray that takes an array of non-negative integers and strings and return a new array without the strings.
@@ -63,6 +69,27 @@ console.log(minMax([1]));
  * The original order must be maintained.
  */
 
+// function filterArray(arr) {
+//
+//     // var greaterThanSeven = arr.filter(function(item) {
+//     //     return number > 7;
+//     // });
+//
+//     // for (var i = 0; i < arr.length; i++) {
+//     //     if(arr[i] === "string") {
+//     //         console.log(arr[i]);
+//     //     }
+//     // }
+//
+// }
+//
+// console.log(filterArray([1, 2, "a", "b"]));
+// console.log(filterArray([1, "a", "b", 0, 15]));
+// console.log(filterArray([1, 2, "aasf", "1", "123", 123]));
+
+
+
+/* ~~~~~DONE~~~~~ */
 
 /**
  * Is the Average of All Elements a Whole Number?
@@ -77,6 +104,40 @@ console.log(minMax([1]));
  * >> isAvgWhole([9, 2, 2, 5]) ➞ false
  */
 
+function isAvgWhole(arr) {
+
+    /* Define total up here */
+
+    var total = 0;
+
+    /* Loop that adds every number to total */
+
+    for(var i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+
+    /* Divides total by the numbers */
+
+    var avg = total / arr.length;
+
+
+    /* If the average is NOT divisible by 1 and returns 0, return false. */
+
+    if (avg % 1 != 0) {
+        return false
+    }
+    return true;
+}
+
+console.log(isAvgWhole([1, 3]));
+console.log(isAvgWhole([1, 2, 3, 4]));
+console.log(isAvgWhole([1, 5, 6]));
+console.log(isAvgWhole([1, 1, 1]));
+console.log(isAvgWhole([9, 2, 2, 5]));
+
+
+
+/* ~~~~~DONE~~~~~ */
 
 /**
  * Drink Sorting
@@ -93,6 +154,32 @@ console.log(minMax([1]));
  * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
  */
 
+drinks = [
+    {name: "lemonade", price: 50},
+    {name: "lime", price: 10},
+    {name: "strawberry", price: 20}
+    ]
+
+function sortByDrinkPrice(input) {
+
+    /* Var sorted is storing the sorted object items */
+
+        var sorted = input.sort(function (a, b) {
+
+         /* This expression is saying the object will be returned in
+         ascending order based on the price property */
+
+            return a.price - b.price
+
+        });
+
+    /* Return new sorted object */
+
+        return sorted;
+    }
+
+
+console.log(sortByDrinkPrice(drinks));
 
 /**
  * Scrabble Hand
@@ -315,6 +402,9 @@ console.log(minMax([1]));
  */
 
 
+
+/* ~~~~~DONE~~~~~ */
+
 /**
  * Count total pets
  * Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
@@ -327,3 +417,29 @@ console.log(minMax([1]));
  *       {name: 'Kenneth Howell', pets: 2}
  *    ]) ➞ 11
  */
+
+/* Had to add an equals here to get it to work; I don't know if
+there was a way to make it work otherwise? */
+
+totalPets = ([
+    {name: 'Fernando Mendoza', pets: 1},
+    {name: 'Douglas Hirsh', pets: 8},
+    {name: 'Kenneth Howell', pets: 2},
+    {name: 'Rhiannon Hayes', pets: 9}
+])
+
+
+function totalPetsFunc(arr) {
+
+    /* Defining total here; reduce allows you to combine a and b
+    into a single value */
+
+    var total = arr.reduce(function(a, b) {
+        return a + b.pets;
+    }, 0);
+
+    return total;
+
+}
+
+console.log(totalPetsFunc(totalPets));
