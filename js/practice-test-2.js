@@ -44,11 +44,13 @@ function minMax(arr) {
      return [min, max];
 }
 
+console.log("Exercise 1");
+
 console.log(minMax([1, 2, 3, 4, 5]));
 console.log(minMax([2334454, 5]));
 console.log(minMax([1]));
 
-
+console.log("---------------");
 
 /* ~~~~~NOT DONE~~~~~ */
 
@@ -129,13 +131,15 @@ function isAvgWhole(arr) {
     return true;
 }
 
+console.log("Exercise 3");
+
 console.log(isAvgWhole([1, 3]));
 console.log(isAvgWhole([1, 2, 3, 4]));
 console.log(isAvgWhole([1, 5, 6]));
 console.log(isAvgWhole([1, 1, 1]));
 console.log(isAvgWhole([9, 2, 2, 5]));
 
-
+console.log("---------------");
 
 /* ~~~~~DONE~~~~~ */
 
@@ -178,8 +182,14 @@ function sortByDrinkPrice(input) {
         return sorted;
     }
 
+console.log("Exercise 4");
 
 console.log(sortByDrinkPrice(drinks));
+
+console.log("---------------");
+
+
+/* ~~~~~DONE~~~~~ */
 
 /**
  * Scrabble Hand
@@ -225,6 +235,50 @@ console.log(sortByDrinkPrice(drinks));
  * Each tile is represented as an object with two keys: tile and score.
  */
 
+maximumScore1 = ([
+        { tile: "N", score: 1 },
+      { tile: "K", score: 5 },
+      { tile: "Z", score: 10 },
+      { tile: "X", score: 8 },
+      { tile: "D", score: 2 },
+      { tile: "A", score: 1 },
+      { tile: "E", score: 1 }
+      ]) //28
+
+maximumScore2 = ([
+        { tile: "B", score: 2 },
+      { tile: "V", score: 4 },
+      { tile: "F", score: 4 },
+      { tile: "U", score: 1 },
+      { tile: "D", score: 2 },
+      { tile: "O", score: 1 },
+      { tile: "U", score: 1 }
+      ]) // 15
+
+
+/* SAME AS TOTAL PETS FUNCTION, JUST CHANGED NAMES SLIGHTLY */
+
+function maxScore(arr) {
+
+    /* Defining total here; reduce allows you to combine a and b
+    into a single value */
+
+    var total = arr.reduce(function(a, b) {
+        return a + b.score;
+    }, 0);
+
+    return total;
+
+}
+
+console.log("Exercise 5");
+
+console.log(maxScore(maximumScore1));
+console.log(maxScore(maximumScore2));
+
+console.log("---------------");
+
+/* ~~~~~DONE~~~~~ */
 
 /**
  * Converting Objects to Arrays
@@ -240,6 +294,31 @@ console.log(sortByDrinkPrice(drinks));
  * Return an empty array if the object is empty.
  */
 
+toArray1 = ({ a: 1, b: 2 }) //[["a", 1], ["b", 2]]
+toArray2 = ({ shrimp: 15, tots: 12 }) //[["shrimp", 15], ["tots", 12]]
+toArray3 = ({}) //[]
+
+
+function toArray(input) {
+
+    /* Object.keys does exactly this; it converts the object into an array
+    and returns an empty array if there is no data */
+
+    var array = Object.keys(input)
+
+    return array;
+
+}
+
+console.log("Exercise 6");
+
+console.log(toArray(toArray1));
+console.log(toArray(toArray2));
+console.log(toArray(toArray3));
+
+console.log("---------------");
+
+/* ~~~~~DONE~~~~~ */
 
 /**
  * Array of Multiples
@@ -255,6 +334,37 @@ console.log(sortByDrinkPrice(drinks));
  * Notice that num is also included in the returned array.
  */
 
+
+function arrayOfMultiples(num, length) {
+
+    /* Empty array answers will be stored in */
+
+    var store = [];
+
+    /* The num is the incrementer, so while we would usually set it to 0, it is now
+    whatever the num is. As long as the num is less than num * length, the loop will run.
+    Then, increment the loop by the num instead of the usual i++ */
+
+    for(let i = num; i <= num * length; i += num){
+        /* Pushes every loop iteration to empty array */
+        store.push(i);
+    }
+    /* Returns new (now full because of the loop) array */
+    return store;
+
+}
+
+console.log("Exercise 7");
+
+console.log(arrayOfMultiples(7, 5));
+console.log(arrayOfMultiples(12, 10));
+console.log(arrayOfMultiples(17, 6));
+
+console.log("---------------");
+
+
+
+/* ~~~~~DONE~~~~~ */
 
 /**
  * Get Sum of People's Budget
@@ -274,6 +384,42 @@ console.log(sortByDrinkPrice(drinks));
  *    ]) ➞ 62600
  */
 
+getBudgets1 =([
+        { name: "John", age: 21, budget: 23000 },
+        { name: "Steve",  age: 32, budget: 40000 },
+        { name: "Martin",  age: 16, budget: 2700 }
+        ]) //65700
+ getBudgets2 = ([
+       { name: "John",  age: 21, budget: 29000 },
+       { name: "Steve",  age: 32, budget: 32000 },
+       { name: "Martin",  age: 16, budget: 1600 }
+       ]) //62600
+
+
+/* SAME AS TOTAL PETS FUNCTION, JUST CHANGED NAMES SLIGHTLY */
+
+function budgetSum(arr) {
+
+    /* Defining total here; reduce allows you to combine a and b
+    into a single value */
+
+    var total = arr.reduce(function(a, b) {
+        return a + b.budget;
+    }, 0);
+
+    return total;
+
+}
+
+console.log("Exercise 8");
+
+console.log(budgetSum(getBudgets1));
+console.log(budgetSum(getBudgets2));
+
+console.log("---------------");
+
+
+/* ~~~~~DONE~~~~~ */
 
 /**
  * Special Arrays
@@ -290,6 +436,35 @@ console.log(sortByDrinkPrice(drinks));
  *    // Index 3 has an even number 8.
  */
 
+     function isSpecialArray(arr) {
+
+         /* Simple loop, nothing I haven't done before; loops through entire array and checks
+         every individual item */
+       for (var i = 0; i < arr.length; i++) {
+
+           /* This is the tricky bit, this is the part that's saying if the number at the index is
+            at an odd/even index and is **NOT ALSO** an odd/even number, return false. */
+
+         if (arr[i] % 2 !== i % 2) {
+             return false
+            }
+
+        }
+
+       return true;
+     }
+
+console.log("Exercise 9");
+
+console.log(isSpecialArray([2, 7, 4, 9, 6, 1, 6, 3]));
+console.log(isSpecialArray([2, 7, 9, 1, 6, 1, 6, 3]));
+console.log(isSpecialArray([2, 7, 8, 8, 6, 1, 6, 3]));
+
+console.log("---------------"); 
+
+
+
+/* ~~~~~DONE~~~~~ */
 
 /**
  * Remove Duplicates from an Array
@@ -306,6 +481,33 @@ console.log(sortByDrinkPrice(drinks));
  * Each array item is unique.
  */
 
+ function removeDuplicates(arr) {
+
+       /* The new variable is unique; this is where all the unique characters
+        will go. This is going to go through each item and filter by whatever we define.*/
+
+      var unique = arr.filter(function (item, index)  {
+
+            /*  Include only elements whose indexes match their indexOf values. If
+                there is a dupe, it is discarded. */
+
+          return arr.indexOf(item) === index;
+      });
+
+      return unique;
+
+
+}
+
+console.log("Exercise 10");
+
+console.log(removeDuplicates([1, 0, 1, 0]));
+console.log(removeDuplicates(["The", "big", "cat"]));
+console.log(removeDuplicates(["The", "the", "big", "Big", "cat", "Cat", "cat"]));
+ console.log(removeDuplicates([1, "dog", 2, "dog", 3, "cat", 4, "Cat"]));
+console.log(["John", "Taylor", "John"]);
+
+console.log("---------------");
 
 /**
  * Lowercase and Uppercase Map
@@ -441,5 +643,7 @@ function totalPetsFunc(arr) {
     return total;
 
 }
+
+console.log("Exercise 16");
 
 console.log(totalPetsFunc(totalPets));
