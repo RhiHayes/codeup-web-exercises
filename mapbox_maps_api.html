@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<!--Mapbox-->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!--Custom JS-->
+<script>
+    mapboxgl.accessToken = "pk.eyJ1IjoicmhpaGF5ZXMiLCJhIjoiY2t1Y3p3dDBpMTV1djJybzF4YjY3Nm1zZyJ9.Bn70REDQYB2_ltESrpDLsQ";
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 7,
+        center: [-98.4916, 29.4252]
+    });
+
+    var paneraMarker = new mapboxgl.Marker(
+        {color: 'blue'
+        }
+    )
+
+        .setLngLat([-98.512210, 29.610910])
+        .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // adds Popup
+                .setHTML("<h2>" + "Panera" + "</h2>")
+
+        )
+        .addTo(map)
+
+
+
+    var oliveMarker = new mapboxgl.Marker(
+        {color: 'green'
+        }
+    )
+
+        .setLngLat([-98.600330, 29.592460])
+        .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // adds Popup
+                .setHTML("<h2>" + "Olive Garden" + "</h2>")
+
+        )
+        .addTo(map)
+
+
+
+    var chiliMarker = new mapboxgl.Marker(
+        {color: 'red'
+        }
+    )
+
+        .setLngLat([-98.595790, 29.576940])
+        .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // adds Popup
+                .setHTML("<h2>" + "Chilis" + "</h2>")
+
+        )
+        .addTo(map)
+
+
+    var food = [
+        {
+            "name": "Panera",
+            "type": "Sandwiches",
+            "rank": "9/10"
+        },
+        {
+            "name": "Olive Garden",
+            "type": "Italian",
+            "rank": "10/10"
+        },
+        {
+            "name": "Chili's",
+            "type": "American/BBQ",
+            "rank": "7/10"
+        }]
+
+
+</script>
+</body>
+</html>
