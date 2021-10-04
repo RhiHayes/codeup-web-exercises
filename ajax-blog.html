@@ -3,8 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>AJAX Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        h1 {
+            color: #450c1e;
+            font-family: Indie Flower, cursive;
+            font-size: 80px;
+            text-align: center;
+            padding-top: 160px;
+            padding-bottom: 50px;
+        }
+
+        h3 {
+            color: #450c1e;
+            font-family: Indie Flower, cursive;
+            font-size: 50px;
+        }
+
+        h6, p {
+            color: #450c1e;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .cotton {
+            width: 100px;
+            height: 100px;
+            margin-right: 40px;
+        }
+
+        .lolly {
+            width: 100px;
+            height: 100px;
+            margin-left: 40px;
+            transform: scaleX(-1);
+        }
+
+        body {
+            background-image: url("https://c3.klipartz.com/pngpicture/412/672/sticker-png-free-candy-video-editing-border-3-for-meps-etc.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .mini-candy {
+            width: 50px;
+            height: 50px;
+            margin-left: 30px;
+        }
+
+
+    </style>
 </head>
 <body>
+
+<h1><img class="cotton" src="https://cdn-icons-png.flaticon.com/512/2971/2971835.png">Rhiannon's Blog<img class="lolly" src="https://cdn-icons-png.flaticon.com/512/3260/3260113.png"></h1>
 
 <div id="posts">
 
@@ -26,8 +86,8 @@
             var html = "";
             $.each(data, function(index) {
 
-                html += "<h1>" + data[index].title + "</h1>";
-                html += "<h3>" + data[index].content + "</h3>";
+                html += "<h3>" + data[index].title + "<img class=mini-candy src=https://cdn-icons-png.flaticon.com/512/711/711016.png>" + "</h3>";
+                html += "<h6>" + data[index].content + "</h6>";
                 html += "<p>" + data[index].categories + "</p>";
                 html += "<p>" + data[index].date + "</td>";
 
