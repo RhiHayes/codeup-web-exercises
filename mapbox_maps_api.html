@@ -17,6 +17,8 @@
 
 <!--Mapbox-->
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 
 <!--Custom JS-->
 <script>
@@ -28,66 +30,77 @@
         center: [-98.4916, 29.4252]
     });
 
-    var paneraMarker = new mapboxgl.Marker(
-        {color: 'blue'
-        }
-    )
+    // var paneraMarker = new mapboxgl.Marker(
+    //     {color: 'blue'
+    //     }
+    // )
+    //
+    //     .setLngLat([-98.512210, 29.610910])
+    //     .setPopup(
+    //         new mapboxgl.Popup({ offset: 25 }) // adds Popup
+    //             .setHTML("<h2>" + "Panera" + "</h2>")
+    //
+    //     )
+    //     .addTo(map)
+    //
+    //
+    //
+    // var oliveMarker = new mapboxgl.Marker(
+    //     {color: 'green'
+    //     }
+    // )
+    //
+    //     .setLngLat([-98.600330, 29.592460])
+    //     .setPopup(
+    //         new mapboxgl.Popup({ offset: 25 }) // adds Popup
+    //             .setHTML("<h2>" + "Olive Garden" + "</h2>")
+    //
+    //     )
+    //     .addTo(map)
+    //
+    //
+    //
+    // var chiliMarker = new mapboxgl.Marker(
+    //     {color: 'red'
+    //     }
+    // )
+    //
+    //     .setLngLat([-98.595790, 29.576940])
+    //     .setPopup(
+    //         new mapboxgl.Popup({ offset: 25 }) // adds Popup
+    //             .setHTML("<h2>" + "Chilis" + "</h2>")
+    //
+    //     )
+    //     .addTo(map)
 
-        .setLngLat([-98.512210, 29.610910])
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // adds Popup
-                .setHTML("<h2>" + "Panera" + "</h2>")
 
-        )
-        .addTo(map)
+    var favFood = [
+        {name:"Panera", location: "1203 North Loop 1604 West, San Antonio, TX 78258"},
+        {name:"Olive Garden", location: "16102 Old Fredericksburg Road, San Antonio, TX 78257"},
+        {name: "Chili's", location: "13735 IH 10 W, San Antonio, TX 78249"}
+    ]
 
+    /* NOTE FOR ME:
 
-
-    var oliveMarker = new mapboxgl.Marker(
-        {color: 'green'
-        }
-    )
-
-        .setLngLat([-98.600330, 29.592460])
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // adds Popup
-                .setHTML("<h2>" + "Olive Garden" + "</h2>")
-
-        )
-        .addTo(map)
+    I knew this was the right code but it wasn't working before because
+    I only had one script. i was missing keys.js and the
+    mapbox-geocoder-utils.js file that defined the geocode function...
+     I'm glad I figured it out though!*/
 
 
+    favFood.forEach(function (food){
+        geocode(food.location, mapboxApiKey).then(function(location){
+            console.log(food.location)
 
-    var chiliMarker = new mapboxgl.Marker(
-        {color: 'red'
-        }
-    )
+            var popup = new mapboxgl.Popup()
+                .setHTML('<h3><em>' + food.name + '</em></h3>');
+            var marker = new mapboxgl.Marker()
+                .setLngLat(location)
+                .addTo(map)
+                .setPopup(popup);
+        });
+    });
 
-        .setLngLat([-98.595790, 29.576940])
-        .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // adds Popup
-                .setHTML("<h2>" + "Chilis" + "</h2>")
-
-        )
-        .addTo(map)
-
-
-    var food = [
-        {
-            "name": "Panera",
-            "type": "Sandwiches",
-            "rank": "9/10"
-        },
-        {
-            "name": "Olive Garden",
-            "type": "Italian",
-            "rank": "10/10"
-        },
-        {
-            "name": "Chili's",
-            "type": "American/BBQ",
-            "rank": "7/10"
-        }]
 
 
 </script>
