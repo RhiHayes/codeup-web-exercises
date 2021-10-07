@@ -2,93 +2,106 @@ console.log("hi")
 
 "use strict"
 
+/* Had to refactor everything and change forecast to oncall... */
+
 $(document).ready(function () {
     //This gets the weather data
-    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+    //https://api.openweathermap.org/data/2.5/onecall < url for onecall api path
+    $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: weatherKey,
-        q: "San Antonio, Texas",
-        units: 'imperial',
+        lat: 29.424349,
+        lon: -98.491142,
+        //will need to change to using separate latlong properties [ref docs]
+        units: 'imperial'
         })
 
         //When the above is done, post the data
 
         .done(function (weatherData) {
 
+            console.log(weatherData);
+
+
+
     //Made New variables for days, had to look through all 40 lists
     //to find the correct dates...
 
-            var dayOne = weatherData.list[0]
-            var dayTwo = weatherData.list[2]
-            var dayThree = weatherData.list[10]
-            var dayFour = weatherData.list[18]
-            var dayFive = weatherData.list[26]
+            var dayOne = weatherData.daily[0]
+            var dayTwo = weatherData.daily[1]
+            var dayThree = weatherData.daily[2]
+            var dayFour = weatherData.daily[3]
+            var dayFive = weatherData.daily[4]
+
+            //All of these variables take the date,convert it, then store it
+            //inside another variable so it can be displayed later
+
+            function parseDate(timestamp) {
+                return new Date(timestamp * 1000).toLocaleDateString();
+            }
+
+            var dayOneDate = parseDate(dayOne.dt)
+            var dayTwoDate = parseDate(dayTwo.dt)
+            var dayThreeDate = parseDate(dayThree.dt)
+            var dayFourDate = parseDate(dayFour.dt)
+            var dayFiveDate = parseDate(dayFive.dt)
 
 
-    //All of these variables take the date, split it, and store it
-    //inside another variable so it can be displayed later
 
-            var dayOneStr = dayOne.dt_txt.split(" ");
-            var dayOneDate = dayOneStr[0]
-
-            var dayTwoStr = dayTwo.dt_txt.split(" ");
-            var dayTwoDate = dayTwoStr[0]
-
-            var dayThreeStr = dayThree.dt_txt.split(" ");
-            var dayThreeDate = dayThreeStr[0]
-
-            var dayFourStr = dayFour.dt_txt.split(" ");
-            var dayFourDate = dayFourStr[0]
-
-            var dayFiveStr = dayFive.dt_txt.split(" ");
-            var dayFiveDate = dayFiveStr[0]
-
-console.log(dayOneDate)
 
      //For my reference, all days are logged so I can get information for
      //that particular day.
-            console.log("Day One:", dayOne);
-            console.log("Day Two:", dayTwo);
-            console.log("Day Three:", dayThree);
-            console.log("Day Four:", dayFour);
-            console.log("Day Five:", dayFive);
+
+            console.log(dayOne)
+            console.log(dayTwo)
+            console.log(dayThree)
+            console.log(dayFour)
+            console.log(dayFive)
+
+
+    //Need to grab and use lat/lon so it can be displayed
+       var lat = weatherData.lat
+       var lon = weatherData.lon
+
+        var latLonArr = [lat, lon];
+
 
 
     //Displays title and date
 
-            $("#location").html(weatherData.city.name);
+            $("#location").html(latLonArr);
 
             $("#date-2").html(dayTwoDate)
             $("#date-3").html(dayThreeDate)
             $("#date-4").html(dayFourDate)
             $("#date-5").html(dayFiveDate)
+//
+//
+// //Displays all avg temperatures
+//
+            $("#temp").html(Math.round(dayOne.temp.day) + "°")
 
+            $("#temp-2").html(Math.round(dayTwo.temp.day) + "°")
 
-//Displays all avg temperatures
+            $("#temp-3").html(Math.round(dayThree.temp.day) + "°")
 
-            $("#temp").html(Math.round(dayOne.main.temp) + "°")
+            $("#temp-4").html( Math.round(dayFour.temp.day) + "°")
 
-            $("#temp-2").html(Math.round(dayTwo.main.temp) + "°")
+            $("#temp-5").html(Math.round(dayFive.temp.day) + "°")
+//
+//
+// //Displays all min/max temperatures
+//
+            $("#min-2").html("Min temp: " + Math.round(dayTwo.temp.min) + "°")
+            $("#max-2").html("Max temp: " + Math.round(dayTwo.temp.max) + "°")
 
-            $("#temp-3").html(Math.round(dayThree.main.temp) + "°")
+            $("#min-3").html("Min temp: " + Math.round(dayThree.temp.min) + "°")
+            $("#max-3").html("Max temp: " + Math.round(dayThree.temp.max) + "°")
 
-            $("#temp-4").html( Math.round(dayFour.main.temp) + "°")
+            $("#min-4").html("Min temp: " + Math.round(dayFour.temp.min) + "°")
+            $("#max-4").html("Max temp: " + Math.round(dayFour.temp.max) + "°")
 
-            $("#temp-5").html(Math.round(dayFive.main.temp) + "°")
-
-
-//Displays all min/max temperatures
-
-            $("#min-2").html("Min temp: " + Math.round(dayTwo.main.temp_min) + "°")
-            $("#max-2").html("Max temp: " + Math.round(dayTwo.main.temp_max) + "°")
-
-            $("#min-3").html("Min temp: " + Math.round(dayThree.main.temp_min) + "°")
-            $("#max-3").html("Max temp: " + Math.round(dayThree.main.temp_max) + "°")
-
-            $("#min-4").html("Min temp: " + Math.round(dayFour.main.temp_min) + "°")
-            $("#max-4").html("Max temp: " + Math.round(dayFour.main.temp_max) + "°")
-
-            $("#min-5").html("Min temp: " + Math.round(dayFive.main.temp_min) + "°")
-            $("#max-5").html("Max temp: " + Math.round(dayFive.main.temp_max) + "°")
+            $("#min-5").html("Min temp: " + Math.round(dayFive.temp.min) + "°")
+            $("#max-5").html("Max temp: " + Math.round(dayFive.temp.max) + "°")
 
 
             $("#weather-1").html(dayOne.weather[0].main)
@@ -97,12 +110,18 @@ console.log(dayOneDate)
             $("#weather-4").html(dayFour.weather[0].main)
             $("#weather-5").html(dayFour.weather[0].main)
 
-
-
-
-
         })
 
+
+    /* My map settings */
+
+    mapboxgl.accessToken = "pk.eyJ1IjoicmhpaGF5ZXMiLCJhIjoiY2t1Y3p3dDBpMTV1djJybzF4YjY3Nm1zZyJ9.Bn70REDQYB2_ltESrpDLsQ";
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 7,
+        center: [-98.4916, 29.4252]
+    });
 
 
 

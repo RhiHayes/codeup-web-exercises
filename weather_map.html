@@ -13,11 +13,11 @@
 </head>
 <body>
 
-    <section class="title">
+<section class="title">
 
-        <h1 class="weather-app-title">Rhiannon's Weather App<img class="title-icon" src="https://img-premium.flaticon.com/png/512/3093/premium/3093390.png?token=exp=1633631166~hmac=9b112a13490dcb72fd93397a7b17e2b9"></h1>
+    <h1 class="weather-app-title">Rhiannon's Weather App<img class="title-icon" src="https://img-premium.flaticon.com/png/512/3093/premium/3093390.png?token=exp=1633631166~hmac=9b112a13490dcb72fd93397a7b17e2b9"></h1>
 
-    </section>
+</section>
 
 <section class="your-choice">
 
@@ -116,6 +116,42 @@
 
 </section>
 
+<section class="search">
+
+    <ul class="list-group list-group-flush">
+
+
+
+        <div class="row">
+
+            <div class="col-lg-4"></div> <!-- EMPTY DIV SPACE-->
+
+            <div class="col-lg-3">
+
+
+        <div class="form-check">
+            <h4>Search:</h4>
+            <input type="search" class="form-control custom" id="search">
+        </div>
+      </div>
+
+            <div class="col-lg-4">
+                <button class="btn btn-light" id="find">Find!</button>
+            </div>
+
+
+    </div>
+  </ul>
+
+</section>
+
+
+<section class="map">
+
+    <div id="map"></div>
+
+</section>
+
 
 
 
@@ -126,7 +162,9 @@
 
 <!-- jQuery for AJAX work -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script src="js/weather_map.js"></script>
 </body>
 </html>

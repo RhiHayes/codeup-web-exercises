@@ -57,11 +57,36 @@
 
 .card {
     text-align: center;
-    padding: 20px;
     margin: 20px;
+    border: 10px #3C99DC solid;
 }
 
 .weather-cards {
     background-color: #66D3Fa;
     padding: 40px;
 }
+
+.card-color {
+    background-color: #baedff;
+    padding: 20px;
+}
+
+/* SEARCH SECTION */
+
+.search {
+    background-color: #3C99DC;
+    padding: 40px 15px;
+}
+
+.btn {
+    margin-top: 35px;
+}
+
+
+/* MAP SECTION */
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
