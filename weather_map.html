@@ -7,20 +7,114 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/weather_map.css">
 
 </head>
 <body>
 
-<div id="container">
+    <section class="title">
 
-    <h1 id="location"></h1>
-    <h6 id="temp"></h6>
-    <h6 id="temp-2"></h6>
-    <h6 id="temp-3"></h6>
-    <h6 id="temp-4"></h6>
-    <h6 id="temp-5"></h6>
+        <h1 class="weather-app-title">Rhiannon's Weather App<img class="title-icon" src="https://img-premium.flaticon.com/png/512/3093/premium/3093390.png?token=exp=1633631166~hmac=9b112a13490dcb72fd93397a7b17e2b9"></h1>
 
+    </section>
+
+<section class="your-choice">
+
+    <div id="container">
+
+        <h3 class="your-location">Your Location:</h3>
+        <h3 class="your-actual-location" id="location"></h3>
+        <h5 class="your-actual-weather" id="weather-1"></h5>
+        <h6 class="today-temp" id="temp"></h6>
+
+    </div>
+
+</section>
+
+<section class="weather-cards">
+
+<div class="card-deck">
+    <div class="row mx-auto">
+
+
+        <div class="col-lg-6">
+            <div class="card-space">
+                <div class="card">
+                    <div class="card-body card-color">
+
+                        <h4 class="card-title" id="date-2"></h4>
+                        <h5 id="weather-2"></h5>
+                        <h5 id="temp-2"></h5>
+
+                        <h6 id="min-2"></h6>
+                        <h6 id="max-2"></h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6">
+            <div class="card-space">
+                <div class="card">
+                    <div class="card-body card-color">
+
+                        <h4 class="card-title" id="date-3"></h4>
+                        <h5 id="weather-3"></h5>
+                        <h5 id="temp-3"></h5>
+
+                        <h6 id="min-3"></h6>
+                        <h6 id="max-3"></h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card-space">
+                <div class="card">
+                    <div class="card-body card-color">
+
+                        <h4 class="card-title" id="date-4"></h4>
+                        <h5 id="weather-4"></h5>
+                        <h5 id="temp-4"></h5>
+
+                        <h6 id="min-4"></h6>
+                        <h6 id="max-4"></h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-6">
+            <div class="card-space">
+                <div class="card">
+                    <div class="card-body card-color">
+
+                        <h4 class="card-title" id="date-5"></h4>
+                        <h5 id="weather-5"></h5>
+                        <h5 id="temp-5"></h5>
+
+                        <h6 id="min-5"></h6>
+                        <h6 id="max-5"></h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
 </div>
+
+</section>
 
 
 

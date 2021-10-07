@@ -14,8 +14,6 @@ $(document).ready(function () {
 
         .done(function (weatherData) {
 
-            console.log("5 day forecast", weatherData);
-
     //Made New variables for days, had to look through all 40 lists
     //to find the correct dates...
 
@@ -44,7 +42,7 @@ $(document).ready(function () {
             var dayFiveStr = dayFive.dt_txt.split(" ");
             var dayFiveDate = dayFiveStr[0]
 
-
+console.log(dayOneDate)
 
      //For my reference, all days are logged so I can get information for
      //that particular day.
@@ -52,24 +50,60 @@ $(document).ready(function () {
             console.log("Day Two:", dayTwo);
             console.log("Day Three:", dayThree);
             console.log("Day Four:", dayFour);
-            console.log("Day Four:", dayFive);
+            console.log("Day Five:", dayFive);
 
 
-    //Displays the data including the date, temp, and name of the city
+    //Displays title and date
 
-            $("#location").html(weatherData.city.name)
+            $("#location").html(weatherData.city.name);
 
-            $("#temp").html(dayOneDate + ": " + Math.round(dayOne.main.temp) + "°")
+            $("#date-2").html(dayTwoDate)
+            $("#date-3").html(dayThreeDate)
+            $("#date-4").html(dayFourDate)
+            $("#date-5").html(dayFiveDate)
 
-            $("#temp-2").html(dayTwoDate + ": "  + Math.round(dayTwo.main.temp) + "°")
 
-            $("#temp-3").html(dayThreeDate + ": " + Math.round(dayThree.main.temp) + "°")
+//Displays all avg temperatures
 
-            $("#temp-4").html(dayFourDate + ": " + Math.round(dayFour.main.temp) + "°")
+            $("#temp").html(Math.round(dayOne.main.temp) + "°")
 
-            $("#temp-5").html(dayFiveDate + ": " + Math.round(dayFour.main.temp) + "°")
+            $("#temp-2").html(Math.round(dayTwo.main.temp) + "°")
 
-    })
+            $("#temp-3").html(Math.round(dayThree.main.temp) + "°")
+
+            $("#temp-4").html( Math.round(dayFour.main.temp) + "°")
+
+            $("#temp-5").html(Math.round(dayFive.main.temp) + "°")
+
+
+//Displays all min/max temperatures
+
+            $("#min-2").html("Min temp: " + Math.round(dayTwo.main.temp_min) + "°")
+            $("#max-2").html("Max temp: " + Math.round(dayTwo.main.temp_max) + "°")
+
+            $("#min-3").html("Min temp: " + Math.round(dayThree.main.temp_min) + "°")
+            $("#max-3").html("Max temp: " + Math.round(dayThree.main.temp_max) + "°")
+
+            $("#min-4").html("Min temp: " + Math.round(dayFour.main.temp_min) + "°")
+            $("#max-4").html("Max temp: " + Math.round(dayFour.main.temp_max) + "°")
+
+            $("#min-5").html("Min temp: " + Math.round(dayFive.main.temp_min) + "°")
+            $("#max-5").html("Max temp: " + Math.round(dayFive.main.temp_max) + "°")
+
+
+            $("#weather-1").html(dayOne.weather[0].main)
+            $("#weather-2").html(dayTwo.weather[0].main)
+            $("#weather-3").html(dayThree.weather[0].main)
+            $("#weather-4").html(dayFour.weather[0].main)
+            $("#weather-5").html(dayFour.weather[0].main)
+
+
+
+
+
+        })
+
+
 
 
 });

@@ -1,0 +1,67 @@
+/* TITLE SECTION */
+
+.title {
+    background-color: #3C99DC;
+    color: #09335e;
+    padding: 20px;
+}
+
+.title-icon {
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.weather-app-title {
+    text-align: center;
+    padding: 20px;
+}
+
+/* YOUR CHOICE SECTION */
+
+.your-choice {
+    background-color: #66D3Fa;
+    padding: 40px;
+}
+
+
+.your-location {
+    color: #09335e;
+    padding-top: 10px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.your-actual-location {
+    color: #0c427a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 65px;
+    text-align: center;
+}
+
+.your-actual-weather {
+    color: #0c427a;
+    padding-bottom: 20px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.today-temp {
+    text-align: center;
+    font-size: 25px;
+    color: #0c427a;
+}
+
+/* CARDS SECTION */
+
+.card {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.weather-cards {
+    background-color: #66D3Fa;
+    padding: 40px;
+}
