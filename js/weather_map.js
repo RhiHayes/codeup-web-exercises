@@ -12,17 +12,16 @@ $(document).ready(function () {
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 7,
+        zoom: 5,
         center: [-98.4916, 29.4252]
     });
 
-
-
-//Making sure the button works
-
-    // $('#find').click(function (event) {
-    //     alert("It works");
-    // });
+    var weatherOptions = {
+            lat: 29.4241,
+            lon: -98.4936,
+            appid: weatherKey,
+            units: 'imperial'
+        };
 
 
     //New user marker
@@ -34,31 +33,35 @@ $(document).ready(function () {
         .addTo(map);
 
 
+
+
+
     //This function allows the user's cords to be picked up/stored
     function onDragEnd() {
         var lngLat = marker.getLngLat();
         var lat = lngLat.lat
         var lng = lngLat.lng
 
-        console.log(lat)
-        console.log(lng)
+        weatherOptions.lng = lng
+        weatherOptions.lat = lat
+        renderWeather()
+        // var latLngArray = []
+        //
+        // latLngArray.push(lat)
+        // latLngArray.push(lng)
+
+        // return latLngArray;
+
     }
 
     marker.on('dragend', onDragEnd);
 
+    // Try to put everything inside a function.
 
-    // function renderWeather(onDragEnd) {
-    //
-    // }
+function renderWeather() {
 
     //This gets the weather data
-    //https://api.openweathermap.org/data/2.5/onecall < url for onecall api path
-    $.get("http://api.openweathermap.org/data/2.5/onecall", {
-        APPID: weatherKey,
-        lat: 29.424349,
-        lon: -98.491142,
-        units: 'imperial'
-        })
+    $.get("http://api.openweathermap.org/data/2.5/onecall", weatherOptions)
 
         //When the above is done, post the data
 
@@ -66,10 +69,12 @@ $(document).ready(function () {
 
             console.log(weatherData);
 
+              $('#weather-1').html("");
+               $('#weather-2').html("");
+               $('#weather-3').html("");
+                $('#weather-4').html("");
+                 $('#weather-5').html("");
 
-
-    //Made New variables for days, had to look through all 40 lists
-    //to find the correct dates...
 
             var dayOne = weatherData.daily[0]
             var dayTwo = weatherData.daily[1]
@@ -94,8 +99,8 @@ $(document).ready(function () {
 
 
 
-     //For my reference, all days are logged so I can get information for
-     //that particular day.
+            //For my reference, all days are logged so I can get information for
+            //that particular day.
 
             console.log(dayOne)
             console.log(dayTwo)
@@ -104,19 +109,19 @@ $(document).ready(function () {
             console.log(dayFive)
 
 
-    //Need to grab and use lat/lon so it can be displayed
-       var latLon = {
-                lat: weatherData.lat,
-                lng: weatherData.lon
-            }
+            //Need to grab and use lat/lon so it can be displayed
+            // var latLon = {
+            //     lat: weatherData.lat,
+            //     lng: weatherData.lon
+            // }
 
+            //
+            // var location = (reverseGeocode(latLon, mapboxApiKey));
+            // console.log(location);
+            //
+            //Displays title and date
 
-var location = (reverseGeocode(latLon, mapboxApiKey));
-            console.log(location);
-
-    //Displays title and date
-
-            // $("#location").html(location);
+            $("#location").html(location);
 
             $("#date-2").html(dayTwoDate)
             $("#date-3").html(dayThreeDate)
@@ -159,6 +164,14 @@ var location = (reverseGeocode(latLon, mapboxApiKey));
             $("#weather-5").html(dayFour.weather[0].main)
 
         })
+
+
+
+
+} //Function ends here
+
+renderWeather(29.4252, -98.4916)  //Makes it start at San Antonio
+
 
 });
 
