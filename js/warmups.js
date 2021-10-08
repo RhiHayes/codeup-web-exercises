@@ -289,3 +289,11 @@ function logNum(input) {
 
 logNum(10);
 logNum(8);
+
+/* 10/8/21 WARMUP */
+
+function convertDateTime(timestamp) {
+    return new Date(timestamp * 1000).toLocaleDateString();
+}
+
+console.log(convertDateTime(1633701968))
