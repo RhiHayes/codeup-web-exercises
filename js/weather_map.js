@@ -12,7 +12,7 @@ $(document).ready(function () {
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 5,
+        zoom: 3,
         center: [-98.4916, 29.4252]
     });
 
@@ -36,7 +36,10 @@ $(document).ready(function () {
 
 
 
-    //This function allows the user's cords to be picked up/stored
+    //This function allows the user's cords to be picked up/stored, then
+    // render weather is called INSIDE THIS FUNCTION to update everything once
+    //the marker is dropped.
+
     function onDragEnd() {
         var lngLat = marker.getLngLat();
         var lat = lngLat.lat
@@ -45,16 +48,41 @@ $(document).ready(function () {
         weatherOptions.lng = lng
         weatherOptions.lat = lat
         renderWeather()
-        // var latLngArray = []
-        //
-        // latLngArray.push(lat)
-        // latLngArray.push(lng)
-
-        // return latLngArray;
 
     }
 
     marker.on('dragend', onDragEnd);
+
+
+    //Clicking the button takes and stores the data from search area
+
+    $('#find').click(function (event) {
+        alert("Your weather has been updated!")
+        var input = document.getElementById('search').value
+        console.log(input);
+
+
+        console.log(geocode(input, mapboxApiKey)); //This gets me the coordinates
+
+        geocode(input, mapboxApiKey).then(function(obj) {
+
+            weatherOptions.lat = obj[0];
+            weatherOptions.lng = obj[1];
+
+            renderWeather()
+
+        })
+
+        // var lat2 = input.lat
+        // var lng2 = input.lng
+        //
+        // weatherOptions.lng = lat2
+        // weatherOptions.lat = lng2
+
+    });
+
+
+
 
     // Try to put everything inside a function.
 

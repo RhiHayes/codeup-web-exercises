@@ -71,6 +71,18 @@
     padding: 20px;
 }
 
+.minus {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+ }
+
+.plus {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+}
+
 /* SEARCH SECTION */
 
 .search {
@@ -79,7 +91,7 @@
 }
 
 .btn {
-    margin-top: 35px;
+    margin-top: 63px;
 }
 
 
