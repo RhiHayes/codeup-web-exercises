@@ -59,16 +59,18 @@ $(document).ready(function () {
 
 
     //Need to grab and use lat/lon so it can be displayed
-       var lat = weatherData.lat
-       var lon = weatherData.lon
+       var latLon = {
+                lat: weatherData.lat,
+                lon: weatherData.lon
+            }
 
-        var latLonArr = [lat, lon];
+        console.log(latLon)
 
 
 
     //Displays title and date
 
-            $("#location").html(latLonArr);
+            // $("#location").html(); lat and lon goes here
 
             $("#date-2").html(dayTwoDate)
             $("#date-3").html(dayThreeDate)
