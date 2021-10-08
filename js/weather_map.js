@@ -5,13 +5,58 @@ console.log("hi")
 /* Had to refactor everything and change forecast to oncall... */
 
 $(document).ready(function () {
+
+    /* My map settings */
+
+    mapboxgl.accessToken = "pk.eyJ1IjoicmhpaGF5ZXMiLCJhIjoiY2t1Y3p3dDBpMTV1djJybzF4YjY3Nm1zZyJ9.Bn70REDQYB2_ltESrpDLsQ";
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 7,
+        center: [-98.4916, 29.4252]
+    });
+
+
+
+//Making sure the button works
+
+    // $('#find').click(function (event) {
+    //     alert("It works");
+    // });
+
+
+    //New user marker
+
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([-98.4916, 29.4252])
+        .addTo(map);
+
+
+    //This function allows the user's cords to be picked up/stored
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        var lat = lngLat.lat
+        var lng = lngLat.lng
+
+        console.log(lat)
+        console.log(lng)
+    }
+
+    marker.on('dragend', onDragEnd);
+
+
+    // function renderWeather(onDragEnd) {
+    //
+    // }
+
     //This gets the weather data
     //https://api.openweathermap.org/data/2.5/onecall < url for onecall api path
     $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: weatherKey,
         lat: 29.424349,
         lon: -98.491142,
-        //will need to change to using separate latlong properties [ref docs]
         units: 'imperial'
         })
 
@@ -32,6 +77,7 @@ $(document).ready(function () {
             var dayFour = weatherData.daily[3]
             var dayFive = weatherData.daily[4]
 
+
             //All of these variables take the date,convert it, then store it
             //inside another variable so it can be displayed later
 
@@ -39,7 +85,7 @@ $(document).ready(function () {
                 return new Date(timestamp * 1000).toLocaleDateString();
             }
 
-            var dayOneDate = parseDate(dayOne.dt)
+            var dayOneDate = parseDate(dayOne.dt) //Not in use
             var dayTwoDate = parseDate(dayTwo.dt)
             var dayThreeDate = parseDate(dayThree.dt)
             var dayFourDate = parseDate(dayFour.dt)
@@ -61,16 +107,16 @@ $(document).ready(function () {
     //Need to grab and use lat/lon so it can be displayed
        var latLon = {
                 lat: weatherData.lat,
-                lon: weatherData.lon
+                lng: weatherData.lon
             }
 
-        console.log(latLon)
 
-
+var location = (reverseGeocode(latLon, mapboxApiKey));
+            console.log(location);
 
     //Displays title and date
 
-            // $("#location").html(); lat and lon goes here
+            // $("#location").html(location);
 
             $("#date-2").html(dayTwoDate)
             $("#date-3").html(dayThreeDate)
@@ -113,19 +159,6 @@ $(document).ready(function () {
             $("#weather-5").html(dayFour.weather[0].main)
 
         })
-
-
-    /* My map settings */
-
-    mapboxgl.accessToken = "pk.eyJ1IjoicmhpaGF5ZXMiLCJhIjoiY2t1Y3p3dDBpMTV1djJybzF4YjY3Nm1zZyJ9.Bn70REDQYB2_ltESrpDLsQ";
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 7,
-        center: [-98.4916, 29.4252]
-    });
-
-
 
 });
 
