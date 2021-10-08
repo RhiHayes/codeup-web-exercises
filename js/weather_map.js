@@ -6,7 +6,8 @@ console.log("hi")
 
 $(document).ready(function () {
 
-    /* My map settings */
+    /* MAP SETTINGS */
+
 
     mapboxgl.accessToken = "pk.eyJ1IjoicmhpaGF5ZXMiLCJhIjoiY2t1Y3p3dDBpMTV1djJybzF4YjY3Nm1zZyJ9.Bn70REDQYB2_ltESrpDLsQ";
     var map = new mapboxgl.Map({
@@ -34,7 +35,10 @@ $(document).ready(function () {
 
 
 
+    /* USER INPUT FUNCTIONS */
 
+
+    /* For draggable marker */
 
     //This function allows the user's cords to be picked up/stored, then
     // render weather is called INSIDE THIS FUNCTION to update everything once
@@ -54,6 +58,8 @@ $(document).ready(function () {
     marker.on('dragend', onDragEnd);
 
 
+    /* For search area */
+
     //Clicking the button takes and stores the data from search area
 
     $('#find').click(function (event) {
@@ -66,8 +72,9 @@ $(document).ready(function () {
 
         geocode(input, mapboxApiKey).then(function(obj) {
 
-            weatherOptions.lat = obj[0];
-            weatherOptions.lng = obj[1];
+            weatherOptions.lat = obj[1];
+            weatherOptions.lng = obj[0];
+
 
             renderWeather()
 
@@ -82,6 +89,8 @@ $(document).ready(function () {
     });
 
 
+
+    /* RENDERING/STYLING AREA */
 
 
     // Try to put everything inside a function.
@@ -98,10 +107,10 @@ function renderWeather() {
             console.log(weatherData);
 
               $('#weather-1').html("");
-               $('#weather-2').html("");
-               $('#weather-3').html("");
-                $('#weather-4').html("");
-                 $('#weather-5').html("");
+              $('#weather-2').html("");
+              $('#weather-3').html("");
+              $('#weather-4').html("");
+              $('#weather-5').html("");
 
 
             var dayOne = weatherData.daily[0]
@@ -155,10 +164,10 @@ function renderWeather() {
             $("#date-3").html(dayThreeDate)
             $("#date-4").html(dayFourDate)
             $("#date-5").html(dayFiveDate)
-//
-//
+
+
 // //Displays all avg temperatures
-//
+
             $("#temp").html(Math.round(dayOne.temp.day) + "°")
 
             $("#temp-2").html(Math.round(dayTwo.temp.day) + "°")
@@ -168,10 +177,10 @@ function renderWeather() {
             $("#temp-4").html( Math.round(dayFour.temp.day) + "°")
 
             $("#temp-5").html(Math.round(dayFive.temp.day) + "°")
-//
-//
+
+
 // //Displays all min/max temperatures
-//
+
             $("#min-2").html("Min temp: " + Math.round(dayTwo.temp.min) + "°")
             $("#max-2").html("Max temp: " + Math.round(dayTwo.temp.max) + "°")
 
@@ -191,12 +200,14 @@ function renderWeather() {
             $("#weather-4").html(dayFour.weather[0].main)
             $("#weather-5").html(dayFour.weather[0].main)
 
+
+
         })
 
 
 
 
-} //Function ends here
+} //Render Weather Function ends here
 
 renderWeather(29.4252, -98.4916)  //Makes it start at San Antonio
 
