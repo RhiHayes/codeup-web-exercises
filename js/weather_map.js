@@ -198,13 +198,35 @@ function renderWeather() {
             $("#weather-2").html(dayTwo.weather[0].main)
             $("#weather-3").html(dayThree.weather[0].main)
             $("#weather-4").html(dayFour.weather[0].main)
-            $("#weather-5").html(dayFour.weather[0].main)
+            $("#weather-5").html(dayFive.weather[0].main)
 
+
+            /* A function that adds custom icons */
+
+            function renderImage (day, weatherV) {
+                if (day === "Clouds") {
+                    $(weatherV).html(day + '<img class="clouds" src="https://cdn-icons-png.flaticon.com/512/3093/3093309.png">')
+                }
+                else if (day === "Clear") {
+                    $(weatherV).html(day + '<img class="clear" src="https://cdn-icons-png.flaticon.com/512/3093/3093303.png">')
+                }
+                else if (day === "Rain") {
+                    $(weatherV).html(day + '<img class="rain" src="https://cdn-icons-png.flaticon.com/512/3093/3093313.png">')
+                }
+                else if (day === "Snow") {
+                    $(weatherV).html(day + '<img class="snow" src="https://cdn-icons.flaticon.com/png/512/3093/premium/3093364.png?token=exp=1633799875~hmac=c3e3c1cd9aa2d0debef5efc8098f8370">')
+                }
+                return false;
+            }
+
+            console.log(renderImage(dayOne.weather[0].main, "#weather-1"));
+            console.log(renderImage(dayTwo.weather[0].main, "#weather-2"));
+            console.log(renderImage(dayThree.weather[0].main, "#weather-3"));
+            console.log(renderImage(dayFour.weather[0].main, "#weather-4"));
+            console.log(renderImage(dayFive.weather[0].main, "#weather-5"));
 
 
         })
-
-
 
 
 } //Render Weather Function ends here
