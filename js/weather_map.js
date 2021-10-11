@@ -219,11 +219,11 @@ function renderWeather() {
                 return false;
             }
 
-            console.log(renderImage(dayOne.weather[0].main, "#weather-1"));
-            console.log(renderImage(dayTwo.weather[0].main, "#weather-2"));
-            console.log(renderImage(dayThree.weather[0].main, "#weather-3"));
-            console.log(renderImage(dayFour.weather[0].main, "#weather-4"));
-            console.log(renderImage(dayFive.weather[0].main, "#weather-5"));
+            renderImage(dayOne.weather[0].main, "#weather-1");
+            renderImage(dayTwo.weather[0].main, "#weather-2");
+            renderImage(dayThree.weather[0].main, "#weather-3");
+            renderImage(dayFour.weather[0].main, "#weather-4");
+            renderImage(dayFive.weather[0].main, "#weather-5");
 
 
         })

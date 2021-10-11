@@ -1,7 +1,7 @@
 /* TITLE SECTION */
 
 .title {
-    background-color: #004d85;
+    background-color: #0064ad;
     color: white;
     padding: 20px;
 }
@@ -61,7 +61,7 @@
 .card {
     text-align: center;
     margin: 20px;
-    border: 10px #002e4f solid;
+    border: 10px #0c427a solid;
 }
 
 .weather-cards {
@@ -71,7 +71,7 @@
 }
 
 .card-color {
-    background-color: #004d85;
+    background-color: #0064ad;
     padding: 20px;
 }
 
@@ -113,7 +113,16 @@
 }
 
 .btn {
-    margin-top: 67px;
+    margin-top: 65px;
+    border: 4px #0c427a solid !important;
+    background-color: #0064ad !important;
+    color: white !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.btn:hover {
+    background-color: #43B2E7 !important;
+    border: 4px #1262b5 solid !important;
 }
 
 .search-title {
@@ -196,13 +205,26 @@
     margin-left: 10px;
 }
 
+/* ADDITIONAL DETAILS SECTION */
+
+
+.add-details {
+    padding-top: 80px;
+    padding-bottom: 250px;
+    background-image: url("https://media.istockphoto.com/vectors/sky-and-clouds-background-sky-and-cloud-with-blue-color-cartoon-vector-id1084416182?k=20&m=1084416182&s=170667a&w=0&h=PCug6e3FHv3Cd8gGJh5reJNLJ0m1rPxyzLhuWkA3sU4=");
+    background-size: cover;
+}
+
+
+
 /* RESPONSIVE */
 
 @media (max-width: 990px) {
 
     .btn {
-        margin-left: 400px;
-        margin-right: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 30px;
         padding-right: 60px;
         padding-left: 60px;;
