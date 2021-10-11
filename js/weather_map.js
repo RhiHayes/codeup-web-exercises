@@ -226,6 +226,49 @@ function renderWeather() {
             renderImage(dayFive.weather[0].main, "#weather-5");
 
 
+
+// //Displays Today's Details
+
+            $("#morn-t").html("Morning temp: " + Math.round(dayOne.temp.morn) + "°")
+
+            $("#aft-t").html("Afternoon temp: " + Math.round(dayOne.temp.day) + "°")
+
+            $("#eve-t").html("Evening temp: " + Math.round(dayOne.temp.eve) + "°")
+
+            $("#nite-t").html("Night temp: " + Math.round(dayOne.temp.night) + "°")
+
+
+            $("#min-1").html("Min temp: " + Math.round(dayOne.temp.min) + "°")
+            $("#max-1").html("Max temp: " + Math.round(dayOne.temp.max) + "°")
+
+
+        //Gives the time of dates in hours and minutes
+            function parseTime(timestamp) {
+                return new Date(timestamp * 1000).toLocaleString([], {hour: '2-digit', minute:'2-digit'});
+            }
+
+
+            $("#sunrise").html("Sunrise: " + parseTime(dayOne.sunrise))
+
+            $("#sunset").html("Sunset: " + parseTime(dayOne.sunset))
+
+            $("#moonrise").html("Moonrise: " + parseTime(dayOne.moonrise))
+
+            $("#moonset").html("Moonset: " + parseTime(dayOne.moonset))
+
+
+            $("#hum").html(dayOne.humidity + "%")
+
+            $("#w-sp").html("Wind speed: " + dayOne.wind_speed)
+
+            $("#w-gu").html("Wind gust: " + dayOne.wind_gust)
+
+            $("#w-de").html("Wind degree: " + dayOne.wind_deg)
+
+
+            $("#pre").html("Pressure: " + dayOne.pressure)
+
+            $("#uvi").html("UVI: " + dayOne.uvi)
         })
 
 

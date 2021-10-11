@@ -108,7 +108,7 @@
 /* SEARCH SECTION */
 
 .search {
-    background-color: #D9EFFA;
+    background-color: #43B2E7;
     padding: 40px 15px;
 }
 
@@ -173,9 +173,16 @@
 
 /* MAP SECTION */
 
+.map {
+    background-color: #43B2E7;
+}
+
 #map {
-    width: 100%;
+    width: 90%;
     height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* CUSTOM ICONS */
@@ -215,7 +222,64 @@
     background-size: cover;
 }
 
+.det-title {
+    color: #0c427a;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-size: 65px;
+    text-align: center;
+    font-family: 'Gemunu Libre', sans-serif;
+}
 
+.mini-title {
+    color: #0c427a;
+    padding-top: 50px;
+    font-size: 45px;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+.item {
+    color: #0064ad;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.sun-moon {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.min-max {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.sun {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.hum {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.wind {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.info {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+}
 
 /* RESPONSIVE */
 
