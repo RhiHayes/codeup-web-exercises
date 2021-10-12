@@ -294,7 +294,11 @@
         padding-left: 60px;;
     }
 
-    .add-details {
+    .mini-title {
+        text-align: center;
+    }
+
+    .item {
         text-align: center;
     }
 
