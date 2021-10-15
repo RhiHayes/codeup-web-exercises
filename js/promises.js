@@ -1,4 +1,3 @@
-console.log("Hi");
 
 // fetch('https://api.github.com/users/rhihayes/events',
 //     {headers: {'Authorization': gitKey}})
@@ -27,18 +26,14 @@ function recentDate(username) {
     fetch('https://api.github.com/users/' + username + '/events',
         {headers: {'Authorization': gitKey}})
         .then(function (results) {
-            console.log("recentDate Function results:")
-            console.log(results);
             return results.json()
         })
         .then(function (resultsArray) {
-            console.log("recentDate Function resultsArray:")
-            console.log(resultsArray);
 
             console.log("Getting Date:")
             var date = resultsArray[0].created_at;
 
-            console.log(date);
+            console.log(username + ": " + date)
         });
 
 }
