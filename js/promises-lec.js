@@ -54,8 +54,45 @@ fetch('https://pokeapi.co/api/v2/pokemon')
 
 // TODO: Using Promises, make a fetch request to the Star Wars API
 
+fetch("https://swapi.dev/api/films")
+    .then((response) => {
+        return response.json();
+    }).then((starWarsFilmData) => {
+        //starWarsFilmData is the parsed object from the call to response.json()
+    console.log(starWarsFilmData.results);
+    starWarsFilmData.results.forEach(function (film) {
+        console.log(film.title)
+    })
+    //starWarsFilmData results
+});
+
+
+
 // TODO: Use Promise chaining to console log the json response
 
 // TODO: chain another method that iterates through the results array and console logs the names
 
 // TODO: Demonstrate Promise.all and Promise.race
+
+
+var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
+let starWarsAPI = fetch("https://swapi.dev/api/films");
+
+/* PROMISE.ALL BELOW*/
+
+// Promise.all([pokemonAPI, starWarsAPI])
+// .then((responses) => {
+// return Promise.all(
+//     responses.map((response) => {
+//     return response.json();
+//         }
+//     ))
+// }).then((parsedResults) => {
+//
+//     console.log(parsedResults);
+//
+// });
+
+
+Promise.race([pokemonAPI, starWarsAPI])
+    .then ((response) => {console.log(response)});
